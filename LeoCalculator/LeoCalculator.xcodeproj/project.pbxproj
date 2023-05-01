@@ -15,6 +15,12 @@
 		2525C1F82A000C08002706F0 /* LeoCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C1F72A000C08002706F0 /* LeoCalculatorTests.swift */; };
 		2525C2022A000C08002706F0 /* LeoCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C2012A000C08002706F0 /* LeoCalculatorUITests.swift */; };
 		2525C2042A000C08002706F0 /* LeoCalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C2032A000C08002706F0 /* LeoCalculatorUITestsLaunchTests.swift */; };
+		2525C2152A000E70002706F0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C2142A000E70002706F0 /* BaseViewController.swift */; };
+		2525C2182A000E92002706F0 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C2172A000E92002706F0 /* NSObjectExtension.swift */; };
+		2525C21A2A000F03002706F0 /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C2192A000F03002706F0 /* ViewInterface.swift */; };
+		2525C21C2A000F2D002706F0 /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C21B2A000F2D002706F0 /* PresenterInterface.swift */; };
+		2525C21E2A000F3B002706F0 /* InteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C21D2A000F3B002706F0 /* InteractorInterface.swift */; };
+		2525C2202A000F46002706F0 /* RouterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C21F2A000F46002706F0 /* RouterInterface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		2525C1FD2A000C08002706F0 /* LeoCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeoCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2525C2012A000C08002706F0 /* LeoCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeoCalculatorUITests.swift; sourceTree = "<group>"; };
 		2525C2032A000C08002706F0 /* LeoCalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeoCalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2525C2142A000E70002706F0 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		2525C2172A000E92002706F0 /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
+		2525C2192A000F03002706F0 /* ViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
+		2525C21B2A000F2D002706F0 /* PresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
+		2525C21D2A000F3B002706F0 /* InteractorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorInterface.swift; sourceTree = "<group>"; };
+		2525C21F2A000F46002706F0 /* RouterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +111,7 @@
 			children = (
 				2525C2102A000D7A002706F0 /* App */,
 				2525C2112A000D82002706F0 /* Module */,
+				2525C2162A000E84002706F0 /* Extensions */,
 				2525C2122A000D8B002706F0 /* Resources */,
 				2525C1EE2A000C08002706F0 /* Info.plist */,
 			);
@@ -134,6 +147,7 @@
 		2525C2112A000D82002706F0 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				2525C2132A000E60002706F0 /* Base */,
 				2525C1E42A000C07002706F0 /* ViewController.swift */,
 			);
 			path = Module;
@@ -146,6 +160,26 @@
 				2525C1EB2A000C08002706F0 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		2525C2132A000E60002706F0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2525C2142A000E70002706F0 /* BaseViewController.swift */,
+				2525C2192A000F03002706F0 /* ViewInterface.swift */,
+				2525C21B2A000F2D002706F0 /* PresenterInterface.swift */,
+				2525C21D2A000F3B002706F0 /* InteractorInterface.swift */,
+				2525C21F2A000F46002706F0 /* RouterInterface.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		2525C2162A000E84002706F0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2525C2172A000E92002706F0 /* NSObjectExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,9 +312,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2525C21E2A000F3B002706F0 /* InteractorInterface.swift in Sources */,
 				2525C1E52A000C07002706F0 /* ViewController.swift in Sources */,
+				2525C2182A000E92002706F0 /* NSObjectExtension.swift in Sources */,
+				2525C2152A000E70002706F0 /* BaseViewController.swift in Sources */,
 				2525C1E12A000C07002706F0 /* AppDelegate.swift in Sources */,
+				2525C21A2A000F03002706F0 /* ViewInterface.swift in Sources */,
 				2525C1E32A000C07002706F0 /* SceneDelegate.swift in Sources */,
+				2525C2202A000F46002706F0 /* RouterInterface.swift in Sources */,
+				2525C21C2A000F2D002706F0 /* PresenterInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
