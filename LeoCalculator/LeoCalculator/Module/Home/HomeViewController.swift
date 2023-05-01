@@ -18,7 +18,11 @@ protocol HomeViewInterface: ViewInterface { }
 // MARK: - HomeViewController
 
 final class HomeViewController: UIViewController, Storyboarded {
-
+    
+    @IBOutlet private var numpadButtons: [UIButton]!
+    @IBOutlet private var basicOperationButtons: [UIButton]!
+    @IBOutlet private var extraOperationButtons: [UIButton]!
+    
     static var storyboardName: StoryboardNames {
         return .home
     }
@@ -28,7 +32,25 @@ final class HomeViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
+        
+        numpadButtons.forEach { button in
+            button.titleLabel?.font = .systemFont(ofSize: 16)
+            button.setTitleColor(.white, for: .normal)
+            button.backgroundColor = .gray
+            button.layer.cornerRadius = 8
+        }
+        
+        basicOperationButtons.forEach { button in
+            button.backgroundColor = .systemOrange
+            button.setTitleColor(.black, for: .normal)
+            button.layer.cornerRadius = 8
+        }
+        
+        extraOperationButtons.forEach { button in
+            button.backgroundColor = .darkGray
+            button.setTitleColor(.systemOrange, for: .normal)
+            button.layer.cornerRadius = 8
+        }
     }
 }
 
