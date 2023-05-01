@@ -7,23 +7,33 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+// MARK: - Constant
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+private enum Constant { }
 
-        // Do any additional setup after loading the view.
+// MARK: - ViewInterface
+
+protocol HomeViewInterface: ViewInterface { }
+
+// MARK: - HomeViewController
+
+final class HomeViewController: UIViewController, Storyboarded {
+
+    static var storyboardName: StoryboardNames {
+        return .home
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    var presenter: HomePresenterInterface!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .blue
     }
-    */
+}
 
+// MARK: - HomeViewInterface
+
+extension HomeViewController: HomeViewInterface {
+    
 }
