@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2525C1E12A000C07002706F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C1E02A000C07002706F0 /* AppDelegate.swift */; };
 		2525C1E32A000C07002706F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C1E22A000C07002706F0 /* SceneDelegate.swift */; };
-		2525C1E52A000C07002706F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C1E42A000C07002706F0 /* ViewController.swift */; };
 		2525C1EA2A000C08002706F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2525C1E92A000C08002706F0 /* Assets.xcassets */; };
 		2525C1ED2A000C08002706F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2525C1EB2A000C08002706F0 /* LaunchScreen.storyboard */; };
 		2525C1F82A000C08002706F0 /* LeoCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C1F72A000C08002706F0 /* LeoCalculatorTests.swift */; };
@@ -21,6 +20,13 @@
 		2525C21C2A000F2D002706F0 /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C21B2A000F2D002706F0 /* PresenterInterface.swift */; };
 		2525C21E2A000F3B002706F0 /* InteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C21D2A000F3B002706F0 /* InteractorInterface.swift */; };
 		2525C2202A000F46002706F0 /* RouterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C21F2A000F46002706F0 /* RouterInterface.swift */; };
+		2525C2232A0014BE002706F0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C2222A0014BE002706F0 /* HomeViewController.swift */; };
+		2525C2252A0014C4002706F0 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C2242A0014C4002706F0 /* HomePresenter.swift */; };
+		2525C2272A0014CF002706F0 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C2262A0014CF002706F0 /* HomeInteractor.swift */; };
+		2525C2292A0014D5002706F0 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C2282A0014D5002706F0 /* HomeRouter.swift */; };
+		2525C22C2A002440002706F0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2525C22B2A002440002706F0 /* Home.storyboard */; };
+		2525C22E2A0024F0002706F0 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C22D2A0024F0002706F0 /* Storyboarded.swift */; };
+		2525C2302A002504002706F0 /* StoryboardNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C22F2A002504002706F0 /* StoryboardNames.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +50,6 @@
 		2525C1DD2A000C07002706F0 /* LeoCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeoCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2525C1E02A000C07002706F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2525C1E22A000C07002706F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2525C1E42A000C07002706F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2525C1E92A000C08002706F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2525C1EC2A000C08002706F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2525C1EE2A000C08002706F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +64,13 @@
 		2525C21B2A000F2D002706F0 /* PresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
 		2525C21D2A000F3B002706F0 /* InteractorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorInterface.swift; sourceTree = "<group>"; };
 		2525C21F2A000F46002706F0 /* RouterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterInterface.swift; sourceTree = "<group>"; };
+		2525C2222A0014BE002706F0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2525C2242A0014C4002706F0 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		2525C2262A0014CF002706F0 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		2525C2282A0014D5002706F0 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		2525C22B2A002440002706F0 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		2525C22D2A0024F0002706F0 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		2525C22F2A002504002706F0 /* StoryboardNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardNames.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +125,7 @@
 				2525C2112A000D82002706F0 /* Module */,
 				2525C2162A000E84002706F0 /* Extensions */,
 				2525C2122A000D8B002706F0 /* Resources */,
+				2525C22A2A002433002706F0 /* Storyboards */,
 				2525C1EE2A000C08002706F0 /* Info.plist */,
 			);
 			path = LeoCalculator;
@@ -148,7 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				2525C2132A000E60002706F0 /* Base */,
-				2525C1E42A000C07002706F0 /* ViewController.swift */,
+				2525C2212A0014B2002706F0 /* Home */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -180,6 +193,27 @@
 				2525C2172A000E92002706F0 /* NSObjectExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2525C2212A0014B2002706F0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2525C2222A0014BE002706F0 /* HomeViewController.swift */,
+				2525C2242A0014C4002706F0 /* HomePresenter.swift */,
+				2525C2262A0014CF002706F0 /* HomeInteractor.swift */,
+				2525C2282A0014D5002706F0 /* HomeRouter.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2525C22A2A002433002706F0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2525C22D2A0024F0002706F0 /* Storyboarded.swift */,
+				2525C22F2A002504002706F0 /* StoryboardNames.swift */,
+				2525C22B2A002440002706F0 /* Home.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2525C22C2A002440002706F0 /* Home.storyboard in Resources */,
 				2525C1ED2A000C08002706F0 /* LaunchScreen.storyboard in Resources */,
 				2525C1EA2A000C08002706F0 /* Assets.xcassets in Resources */,
 			);
@@ -313,14 +348,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				2525C21E2A000F3B002706F0 /* InteractorInterface.swift in Sources */,
-				2525C1E52A000C07002706F0 /* ViewController.swift in Sources */,
 				2525C2182A000E92002706F0 /* NSObjectExtension.swift in Sources */,
+				2525C2272A0014CF002706F0 /* HomeInteractor.swift in Sources */,
 				2525C2152A000E70002706F0 /* BaseViewController.swift in Sources */,
 				2525C1E12A000C07002706F0 /* AppDelegate.swift in Sources */,
+				2525C22E2A0024F0002706F0 /* Storyboarded.swift in Sources */,
+				2525C2292A0014D5002706F0 /* HomeRouter.swift in Sources */,
+				2525C2232A0014BE002706F0 /* HomeViewController.swift in Sources */,
 				2525C21A2A000F03002706F0 /* ViewInterface.swift in Sources */,
 				2525C1E32A000C07002706F0 /* SceneDelegate.swift in Sources */,
 				2525C2202A000F46002706F0 /* RouterInterface.swift in Sources */,
+				2525C2302A002504002706F0 /* StoryboardNames.swift in Sources */,
 				2525C21C2A000F2D002706F0 /* PresenterInterface.swift in Sources */,
+				2525C2252A0014C4002706F0 /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
