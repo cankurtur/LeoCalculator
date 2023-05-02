@@ -27,6 +27,7 @@
 		2525C22C2A002440002706F0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2525C22B2A002440002706F0 /* Home.storyboard */; };
 		2525C22E2A0024F0002706F0 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C22D2A0024F0002706F0 /* Storyboarded.swift */; };
 		2525C2302A002504002706F0 /* StoryboardNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C22F2A002504002706F0 /* StoryboardNames.swift */; };
+		2525C2322A003576002706F0 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C2312A003576002706F0 /* UIFontExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		2525C22B2A002440002706F0 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		2525C22D2A0024F0002706F0 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		2525C22F2A002504002706F0 /* StoryboardNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardNames.swift; sourceTree = "<group>"; };
+		2525C2312A003576002706F0 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				2525C2172A000E92002706F0 /* NSObjectExtension.swift */,
+				2525C2312A003576002706F0 /* UIFontExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2525C21E2A000F3B002706F0 /* InteractorInterface.swift in Sources */,
+				2525C2322A003576002706F0 /* UIFontExtension.swift in Sources */,
 				2525C2182A000E92002706F0 /* NSObjectExtension.swift in Sources */,
 				2525C2272A0014CF002706F0 /* HomeInteractor.swift in Sources */,
 				2525C2152A000E70002706F0 /* BaseViewController.swift in Sources */,

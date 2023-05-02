@@ -6,3 +6,54 @@
 //
 
 import Foundation
+
+// MARK: - PresenterInterface
+
+protocol HomePresenterInterface: PresenterInterface {
+    func numpadButtonTapped(title: String?)
+    func basicOperationsTapped(operation: String?)
+    func extraOperationsTapped(title: String?)
+}
+
+// MARK: - HomePresenter
+
+final class HomePresenter {
+    private let router: HomeRouterInterface
+    private let interactor: HomeInteractorInterface
+    private weak var view: HomeViewInterface?
+    
+    init(router: HomeRouterInterface,
+         interactor: HomeInteractorInterface,
+         view: HomeViewInterface?) {
+        self.router = router
+        self.interactor = interactor
+        self.view = view
+    }
+}
+
+// MARK: - HomePresenterInterface
+
+extension HomePresenter: HomePresenterInterface {
+    func viewDidLoad() {
+        view?.prepareUI()
+    }
+    
+    func numpadButtonTapped(title: String?) {
+        // TODO: This line will be added later.
+        print(#function)
+    }
+    
+    func basicOperationsTapped(operation: String?) {
+        // TODO: This line will be added later.
+        print(#function)
+    }
+    
+    func extraOperationsTapped(title: String?) {
+        // TODO: This line will be added later.
+        print(#function)
+    }
+}
+
+// MARK: - HomeInteractorOutput
+
+extension HomePresenter: HomeInteractorOutput { }
