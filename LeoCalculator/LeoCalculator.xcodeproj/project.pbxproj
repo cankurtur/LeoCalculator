@@ -43,6 +43,7 @@
 		25D792CB2A0301DC000CC7FA /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D792CA2A0301DC000CC7FA /* Themes.swift */; };
 		25D792CD2A030353000CC7FA /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D792CC2A030353000CC7FA /* ThemeManager.swift */; };
 		25D792CF2A03063D000CC7FA /* HomeUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D792CE2A03063D000CC7FA /* HomeUIModel.swift */; };
+		25D792D22A031C5C000CC7FA /* HomeHiddenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D792D12A031C5C000CC7FA /* HomeHiddenModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		25D792CA2A0301DC000CC7FA /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
 		25D792CC2A030353000CC7FA /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		25D792CE2A03063D000CC7FA /* HomeUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIModel.swift; sourceTree = "<group>"; };
+		25D792D12A031C5C000CC7FA /* HomeHiddenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHiddenModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,11 +236,11 @@
 		2525C2212A0014B2002706F0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				25D792D02A031C4F000CC7FA /* Models */,
 				2525C2222A0014BE002706F0 /* HomeViewController.swift */,
 				2525C2242A0014C4002706F0 /* HomePresenter.swift */,
 				2525C2262A0014CF002706F0 /* HomeInteractor.swift */,
 				2525C2282A0014D5002706F0 /* HomeRouter.swift */,
-				25D792CE2A03063D000CC7FA /* HomeUIModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -270,6 +272,15 @@
 				25D792CC2A030353000CC7FA /* ThemeManager.swift */,
 			);
 			path = AppThemeManager;
+			sourceTree = "<group>";
+		};
+		25D792D02A031C4F000CC7FA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				25D792CE2A03063D000CC7FA /* HomeUIModel.swift */,
+				25D792D12A031C5C000CC7FA /* HomeHiddenModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,6 +443,7 @@
 				25D792CF2A03063D000CC7FA /* HomeUIModel.swift in Sources */,
 				2525C21A2A000F03002706F0 /* ViewInterface.swift in Sources */,
 				25D792C42A02EF55000CC7FA /* RCManager.swift in Sources */,
+				25D792D22A031C5C000CC7FA /* HomeHiddenModel.swift in Sources */,
 				2525C1E32A000C07002706F0 /* SceneDelegate.swift in Sources */,
 				2525C2202A000F46002706F0 /* RouterInterface.swift in Sources */,
 				25D792C62A02F34B000CC7FA /* CompositionRoot.swift in Sources */,

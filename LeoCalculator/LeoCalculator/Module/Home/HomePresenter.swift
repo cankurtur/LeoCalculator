@@ -16,6 +16,7 @@ protocol HomePresenterInterface: PresenterInterface {
     func extraOperationsTapped(operation: String?)
     func clearButtonTapped()
     func equalButtonTapped()
+    func didChangeValueOfSwitch(_ isOn: Bool)
 }
 
 // MARK: - HomePresenter
@@ -24,7 +25,7 @@ final class HomePresenter {
     private let router: HomeRouterInterface
     private let interactor: HomeInteractorInterface
     private weak var view: HomeViewInterface?
-    private let rcManager: RCManagerInterface
+    private let compositionRoot: CompositionRoot
     
     var previousNumber: Double = 0
     var currentNumber: Double = 0
@@ -38,11 +39,11 @@ final class HomePresenter {
     init(router: HomeRouterInterface,
          interactor: HomeInteractorInterface,
          view: HomeViewInterface?,
-         rcManager: RCManagerInterface = CompositionRootContainer.shared.compositionRoot.rcManager) {
+         compositionRoot: CompositionRoot = CompositionRoot.shared) {
         self.router = router
         self.interactor = interactor
         self.view = view
-        self.rcManager = rcManager
+        self.compositionRoot = compositionRoot
     }
 }
 
@@ -50,14 +51,9 @@ final class HomePresenter {
 
 extension HomePresenter: HomePresenterInterface {
     func viewDidLoad() {
-        view?.prepareUI(
-            addIsHidden: !rcManager.bool(forKey: .isAddButtonEnabled),
-            subtractIsHidden: !rcManager.bool(forKey: .isSubtractButtonEnabled),
-            multiplyIsHidden: !rcManager.bool(forKey: .isMultiplyButtonEnabled),
-            divideIsHidden: !rcManager.bool(forKey: .isDivideButtonEnabled),
-            sinIsHidden: !rcManager.bool(forKey: .isSinButtonEnabled),
-            cosIsHidden: !rcManager.bool(forKey: .isCosButtonEnabled),
-            bitcoinIsHidden: !rcManager.bool(forKey: .isBitcoinButtonEnabled))
+        view?.prepareUI()
+        view?.prepareHiddenity(with: compositionRoot.hiddenModel)
+        view?.updateUI(with: compositionRoot.themeManager.getHomeUIModel())
     }
     
     func numpadButtonTapped(title: String?) {
@@ -140,6 +136,12 @@ extension HomePresenter: HomePresenterInterface {
         let firstNumber = isOnTheFirstCalculation ? previousNumber : resultNumber
         let result = currentOperation.makeOperation(firstNumber, currentNumber) ?? 0
         view?.setResultLabel(with: "\(result)")
+    }
+    
+    func didChangeValueOfSwitch(_ isOn: Bool) {
+        let theme = isOn ? Theme.red : Theme.original
+        compositionRoot.themeManager.changeCurrentTheme(with: theme)
+        view?.updateUI(with: compositionRoot.themeManager.getHomeUIModel())
     }
 }
 
