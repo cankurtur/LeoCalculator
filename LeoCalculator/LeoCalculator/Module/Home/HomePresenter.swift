@@ -6,13 +6,16 @@
 //
 
 import Foundation
+import LeoCalculation
 
 // MARK: - PresenterInterface
 
 protocol HomePresenterInterface: PresenterInterface {
     func numpadButtonTapped(title: String?)
     func basicOperationsTapped(operation: String?)
-    func extraOperationsTapped(title: String?)
+    func extraOperationsTapped(operation: String?)
+    func clearButtonTapped()
+    func equalButtonTapped()
 }
 
 // MARK: - HomePresenter
@@ -21,6 +24,15 @@ final class HomePresenter {
     private let router: HomeRouterInterface
     private let interactor: HomeInteractorInterface
     private weak var view: HomeViewInterface?
+    
+    var previousNumber: Double = 0
+    var currentNumber: Double = 0
+    var resultNumber: Double = 0
+    var currentBasicOperation: BasicOperations?
+    var currentExtraOpertaion: ExtraOperations?
+    var isOnTheFirstCalculation: Bool = false
+    
+    var input: String = ""
     
     init(router: HomeRouterInterface,
          interactor: HomeInteractorInterface,
@@ -39,18 +51,100 @@ extension HomePresenter: HomePresenterInterface {
     }
     
     func numpadButtonTapped(title: String?) {
-        // TODO: This line will be added later.
-        print(#function)
+        guard let number = title else { return }
+        
+        if number == ".", input.contains(".") {
+            return
+        }
+        
+        if input.count == 1, input.contains("0") {
+            input = ""
+        }
+        
+        input += number
+        currentNumber = Double(input) ?? 0
+        view?.setResultLabel(with: input)
     }
     
     func basicOperationsTapped(operation: String?) {
-        // TODO: This line will be added later.
-        print(#function)
+        guard let operation = operation else { return }
+
+        if isOnTheFirstCalculation {
+            resultNumber  = currentBasicOperation?.makeOperation(previousNumber, currentNumber) ?? 0
+            view?.setResultLabel(with: "\(resultNumber)")
+            isOnTheFirstCalculation = false
+            previousNumber = currentNumber
+            currentNumber = 0
+            input = ""
+            currentBasicOperation = BasicOperations.currentOperation(operation)
+        } else {
+            
+            if resultNumber == 0.0 {
+                previousNumber = currentNumber
+                isOnTheFirstCalculation = true
+                input = ""
+                currentNumber = 0
+                currentBasicOperation = BasicOperations.currentOperation(operation)
+                
+            } else {
+                resultNumber  = currentBasicOperation?.makeOperation(resultNumber, currentNumber) ?? 0
+                view?.setResultLabel(with: "\(resultNumber)")
+                isOnTheFirstCalculation = false
+                previousNumber = currentNumber
+                currentNumber = 0
+                input = ""
+                currentBasicOperation = BasicOperations.currentOperation(operation)
+            }
+            
+        }
+
     }
     
-    func extraOperationsTapped(title: String?) {
-        // TODO: This line will be added later.
-        print(#function)
+    func extraOperationsTapped(operation: String?) {
+        guard let operation = operation else { return }
+        
+        currentExtraOpertaion = ExtraOperations.currentOperation(operation)
+        
+        guard currentExtraOpertaion != nil else { return }
+        
+        if currentNumber > 0 {
+            let result = currentExtraOpertaion?.getValue(currentNumber) ?? 0
+            view?.setResultLabel(with: "\(result)")
+            resetCalculation()
+            return
+        }
+        
+        if resultNumber > 0 {
+            let result = currentExtraOpertaion?.getValue(resultNumber) ?? 0
+            view?.setResultLabel(with: "\(result)")
+            resetCalculation()
+            return
+        }
+    }
+    
+    func clearButtonTapped() {
+        resetCalculation()
+        view?.setResultLabel(with: input)
+    }
+    
+    func equalButtonTapped() {
+        guard let currentOperation = currentBasicOperation else { return }
+        let firstNumber = isOnTheFirstCalculation ? previousNumber : resultNumber
+        let result = currentOperation.makeOperation(firstNumber, currentNumber) ?? 0
+        view?.setResultLabel(with: "\(result)")
+    }
+}
+
+// MARK: - Helper
+
+private extension HomePresenter {
+    func resetCalculation() {
+        input = "0"
+        currentNumber = 0
+        currentBasicOperation = nil
+        previousNumber = 0
+        resultNumber = 0
+        isOnTheFirstCalculation = false
     }
 }
 
