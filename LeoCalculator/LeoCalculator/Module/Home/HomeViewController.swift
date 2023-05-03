@@ -57,7 +57,13 @@ private enum Constant {
 // MARK: - ViewInterface
 
 protocol HomeViewInterface: ViewInterface {
-    func prepareUI()
+    func prepareUI(addIsHidden: Bool,
+                   subtractIsHidden: Bool,
+                   multiplyIsHidden: Bool,
+                   divideIsHidden: Bool,
+                   sinIsHidden: Bool,
+                   cosIsHidden: Bool,
+                   bitcoinIsHidden: Bool)
     func setResultLabel(with result: String)
 }
 
@@ -67,10 +73,15 @@ final class HomeViewController: UIViewController, Storyboarded {
     
     @IBOutlet private weak var resultLabel: UILabel!
     @IBOutlet private var numpadButtons: [UIButton]!
-    @IBOutlet private var basicOperationButtons: [UIButton]!
-    @IBOutlet private var extraOperationButtons: [UIButton]!
     @IBOutlet private weak var clearButton: UIButton!
     @IBOutlet private weak var equalButton: UIButton!
+    @IBOutlet private weak var addButton: UIButton!
+    @IBOutlet private weak var subtractButton: UIButton!
+    @IBOutlet private weak var multiplyButton: UIButton!
+    @IBOutlet private weak var divideButton: UIButton!
+    @IBOutlet private weak var sinButton: UIButton!
+    @IBOutlet private weak var cosButton: UIButton!
+    @IBOutlet private weak var bitcoinButton: UIButton!
   
     static var storyboardName: StoryboardNames {
         return .home
@@ -87,12 +98,24 @@ final class HomeViewController: UIViewController, Storyboarded {
 // MARK: - HomeViewInterface
 
 extension HomeViewController: HomeViewInterface {
-    func prepareUI() {
+    func prepareUI(addIsHidden: Bool,
+                   subtractIsHidden: Bool,
+                   multiplyIsHidden: Bool,
+                   divideIsHidden: Bool,
+                   sinIsHidden: Bool,
+                   cosIsHidden: Bool,
+                   bitcoinIsHidden: Bool) {
         view.backgroundColor = Constant.backgroundColor
         navigationController?.setNavigationBarHidden(true, animated: true)
         
         prepareLabels()
-        prepareButtons()
+        prepareButtons(addIsHidden: addIsHidden,
+                       subtractIsHidden: subtractIsHidden,
+                       multiplyIsHidden: multiplyIsHidden,
+                       divideIsHidden: divideIsHidden,
+                       sinIsHidden: sinIsHidden,
+                       cosIsHidden: cosIsHidden,
+                       bitcoinIsHidden: bitcoinIsHidden)
     }
     
     func setResultLabel(with result: String) {
@@ -111,7 +134,13 @@ private extension HomeViewController {
         resultLabel.textAlignment = .right
     }
     
-    func prepareButtons() {
+    func prepareButtons(addIsHidden: Bool,
+                        subtractIsHidden: Bool,
+                        multiplyIsHidden: Bool,
+                        divideIsHidden: Bool,
+                        sinIsHidden: Bool,
+                        cosIsHidden: Bool,
+                        bitcoinIsHidden: Bool) {
         numpadButtons.forEach { button in
             button.titleLabel?.font = Constant.NumpadButtons.titleFont
             button.setTitleColor(Constant.NumpadButtons.titleColor, for: .normal)
@@ -120,22 +149,55 @@ private extension HomeViewController {
             button.addTarget(self, action: #selector(numpadButtonTapped(_:)), for: .touchUpInside)
         }
         
-        basicOperationButtons.forEach { button in
-            button.titleLabel?.font = Constant.BasicOperationButtons.titleFont
-            button.setTitleColor(Constant.BasicOperationButtons.titleColor, for: .normal)
-            button.backgroundColor = Constant.BasicOperationButtons.backgroundColor
-            button.layer.cornerRadius = Constant.BasicOperationButtons.cornerRadius
-            button.addTarget(self, action: #selector(basicOperationsTapped(_:)), for: .touchUpInside)
-        }
+        addButton.titleLabel?.font = Constant.BasicOperationButtons.titleFont
+        addButton.setTitleColor(Constant.BasicOperationButtons.titleColor, for: .normal)
+        addButton.backgroundColor = Constant.BasicOperationButtons.backgroundColor
+        addButton.layer.cornerRadius = Constant.BasicOperationButtons.cornerRadius
+        addButton.addTarget(self, action: #selector(basicOperationsTapped(_:)), for: .touchUpInside)
+        addButton.isHidden = addIsHidden
         
-        extraOperationButtons.forEach { button in
-            button.titleLabel?.font = Constant.ExtraOperationButtons.titleFont
-            button.setTitleColor(Constant.ExtraOperationButtons.titleColor, for: .normal)
-            button.backgroundColor = Constant.ExtraOperationButtons.backgroundColor
-            button.layer.cornerRadius = Constant.ExtraOperationButtons.cornerRadius
-            button.addTarget(self, action: #selector(extraOperationsTapped(_:)), for: .touchUpInside)
-        }
-        
+        subtractButton.titleLabel?.font = Constant.BasicOperationButtons.titleFont
+        subtractButton.setTitleColor(Constant.BasicOperationButtons.titleColor, for: .normal)
+        subtractButton.backgroundColor = Constant.BasicOperationButtons.backgroundColor
+        subtractButton.layer.cornerRadius = Constant.BasicOperationButtons.cornerRadius
+        subtractButton.addTarget(self, action: #selector(basicOperationsTapped(_:)), for: .touchUpInside)
+        subtractButton.isHidden = subtractIsHidden
+
+        multiplyButton.titleLabel?.font = Constant.BasicOperationButtons.titleFont
+        multiplyButton.setTitleColor(Constant.BasicOperationButtons.titleColor, for: .normal)
+        multiplyButton.backgroundColor = Constant.BasicOperationButtons.backgroundColor
+        multiplyButton.layer.cornerRadius = Constant.BasicOperationButtons.cornerRadius
+        multiplyButton.addTarget(self, action: #selector(basicOperationsTapped(_:)), for: .touchUpInside)
+        multiplyButton.isHidden = multiplyIsHidden
+
+        divideButton.titleLabel?.font = Constant.BasicOperationButtons.titleFont
+        divideButton.setTitleColor(Constant.BasicOperationButtons.titleColor, for: .normal)
+        divideButton.backgroundColor = Constant.BasicOperationButtons.backgroundColor
+        divideButton.layer.cornerRadius = Constant.BasicOperationButtons.cornerRadius
+        divideButton.addTarget(self, action: #selector(basicOperationsTapped(_:)), for: .touchUpInside)
+        divideButton.isHidden = divideIsHidden
+
+        sinButton.titleLabel?.font = Constant.ExtraOperationButtons.titleFont
+        sinButton.setTitleColor(Constant.ExtraOperationButtons.titleColor, for: .normal)
+        sinButton.backgroundColor = Constant.ExtraOperationButtons.backgroundColor
+        sinButton.layer.cornerRadius = Constant.ExtraOperationButtons.cornerRadius
+        sinButton.addTarget(self, action: #selector(extraOperationsTapped(_:)), for: .touchUpInside)
+        sinButton.isHidden = sinIsHidden
+
+        cosButton.titleLabel?.font = Constant.ExtraOperationButtons.titleFont
+        cosButton.setTitleColor(Constant.ExtraOperationButtons.titleColor, for: .normal)
+        cosButton.backgroundColor = Constant.ExtraOperationButtons.backgroundColor
+        cosButton.layer.cornerRadius = Constant.ExtraOperationButtons.cornerRadius
+        cosButton.addTarget(self, action: #selector(extraOperationsTapped(_:)), for: .touchUpInside)
+        cosButton.isHidden = cosIsHidden
+
+        bitcoinButton.titleLabel?.font = Constant.ExtraOperationButtons.titleFont
+        bitcoinButton.setTitleColor(Constant.ExtraOperationButtons.titleColor, for: .normal)
+        bitcoinButton.backgroundColor = Constant.ExtraOperationButtons.backgroundColor
+        bitcoinButton.layer.cornerRadius = Constant.ExtraOperationButtons.cornerRadius
+        bitcoinButton.addTarget(self, action: #selector(extraOperationsTapped(_:)), for: .touchUpInside)
+        bitcoinButton.isHidden = bitcoinIsHidden
+
         clearButton.titleLabel?.font = Constant.ClearButton.titleFont
         clearButton.setTitleColor(Constant.ClearButton.titleColor, for: .normal)
         clearButton.backgroundColor = Constant.ClearButton.backgroundColor

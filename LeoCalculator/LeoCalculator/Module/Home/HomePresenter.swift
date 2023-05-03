@@ -24,6 +24,7 @@ final class HomePresenter {
     private let router: HomeRouterInterface
     private let interactor: HomeInteractorInterface
     private weak var view: HomeViewInterface?
+    private let rcManager: RCManagerInterface
     
     var previousNumber: Double = 0
     var currentNumber: Double = 0
@@ -36,10 +37,12 @@ final class HomePresenter {
     
     init(router: HomeRouterInterface,
          interactor: HomeInteractorInterface,
-         view: HomeViewInterface?) {
+         view: HomeViewInterface?,
+         rcManager: RCManagerInterface = CompositionRootContainer.shared.compositionRoot.rcManager) {
         self.router = router
         self.interactor = interactor
         self.view = view
+        self.rcManager = rcManager
     }
 }
 
@@ -47,7 +50,14 @@ final class HomePresenter {
 
 extension HomePresenter: HomePresenterInterface {
     func viewDidLoad() {
-        view?.prepareUI()
+        view?.prepareUI(
+            addIsHidden: !rcManager.bool(forKey: .isAddButtonEnabled),
+            subtractIsHidden: !rcManager.bool(forKey: .isSubtractButtonEnabled),
+            multiplyIsHidden: !rcManager.bool(forKey: .isMultiplyButtonEnabled),
+            divideIsHidden: !rcManager.bool(forKey: .isDivideButtonEnabled),
+            sinIsHidden: !rcManager.bool(forKey: .isSinButtonEnabled),
+            cosIsHidden: !rcManager.bool(forKey: .isCosButtonEnabled),
+            bitcoinIsHidden: !rcManager.bool(forKey: .isBitcoinButtonEnabled))
     }
     
     func numpadButtonTapped(title: String?) {
@@ -95,9 +105,7 @@ extension HomePresenter: HomePresenterInterface {
                 input = ""
                 currentBasicOperation = BasicOperations.currentOperation(operation)
             }
-            
         }
-
     }
     
     func extraOperationsTapped(operation: String?) {

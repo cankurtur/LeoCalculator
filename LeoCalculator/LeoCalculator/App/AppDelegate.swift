@@ -6,15 +6,23 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseRemoteConfig
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        setupFirebase()
+        setupRCManager()
         return true
     }
+    
+    private func setupFirebase() {
+        FirebaseApp.configure()
+    }
+    
+    private func setupRCManager() {
+        CompositionRootContainer.shared.compositionRoot.rcManager.fetchRCValues { _ in }
+    }
 }
-
