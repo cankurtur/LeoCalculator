@@ -23,6 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func setupRCManager() {
-        CompositionRootContainer.shared.compositionRoot.rcManager.fetchRCValues { _ in }
+        CompositionRoot.shared.rcManager.fetchRCValues { _ in }
     }
 }
