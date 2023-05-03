@@ -28,10 +28,6 @@
 		2525C22E2A0024F0002706F0 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C22D2A0024F0002706F0 /* Storyboarded.swift */; };
 		2525C2302A002504002706F0 /* StoryboardNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C22F2A002504002706F0 /* StoryboardNames.swift */; };
 		2525C2322A003576002706F0 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C2312A003576002706F0 /* UIFontExtension.swift */; };
-		25AE74782A01C529004288A1 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 25AE74772A01C529004288A1 /* FirebaseAnalytics */; };
-		25AE747A2A01C529004288A1 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 25AE74792A01C529004288A1 /* FirebaseCrashlytics */; };
-		25AE747C2A01C529004288A1 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 25AE747B2A01C529004288A1 /* FirebaseRemoteConfig */; };
-		25AE747E2A01C551004288A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25AE747D2A01C550004288A1 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +73,6 @@
 		2525C22D2A0024F0002706F0 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		2525C22F2A002504002706F0 /* StoryboardNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardNames.swift; sourceTree = "<group>"; };
 		2525C2312A003576002706F0 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
-		25AE747D2A01C550004288A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +80,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25AE747C2A01C529004288A1 /* FirebaseRemoteConfig in Frameworks */,
-				25AE74782A01C529004288A1 /* FirebaseAnalytics in Frameworks */,
-				25AE747A2A01C529004288A1 /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +129,6 @@
 				2525C2122A000D8B002706F0 /* Resources */,
 				2525C22A2A002433002706F0 /* Storyboards */,
 				2525C1EE2A000C08002706F0 /* Info.plist */,
-				25AE747D2A01C550004288A1 /* GoogleService-Info.plist */,
 			);
 			path = LeoCalculator;
 			sourceTree = "<group>";
@@ -244,11 +235,6 @@
 			dependencies = (
 			);
 			name = LeoCalculator;
-			packageProductDependencies = (
-				25AE74772A01C529004288A1 /* FirebaseAnalytics */,
-				25AE74792A01C529004288A1 /* FirebaseCrashlytics */,
-				25AE747B2A01C529004288A1 /* FirebaseRemoteConfig */,
-			);
 			productName = LeoCalculator;
 			productReference = 2525C1DD2A000C07002706F0 /* LeoCalculator.app */;
 			productType = "com.apple.product-type.application";
@@ -321,9 +307,6 @@
 				Base,
 			);
 			mainGroup = 2525C1D42A000C07002706F0;
-			packageReferences = (
-				25AE74762A01C529004288A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-			);
 			productRefGroup = 2525C1DE2A000C07002706F0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -341,7 +324,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2525C22C2A002440002706F0 /* Home.storyboard in Resources */,
-				25AE747E2A01C551004288A1 /* GoogleService-Info.plist in Resources */,
 				2525C1ED2A000C08002706F0 /* LaunchScreen.storyboard in Resources */,
 				2525C1EA2A000C08002706F0 /* Assets.xcassets in Resources */,
 			);
@@ -714,35 +696,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		25AE74762A01C529004288A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		25AE74772A01C529004288A1 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 25AE74762A01C529004288A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		25AE74792A01C529004288A1 /* FirebaseCrashlytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 25AE74762A01C529004288A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCrashlytics;
-		};
-		25AE747B2A01C529004288A1 /* FirebaseRemoteConfig */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 25AE74762A01C529004288A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseRemoteConfig;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2525C1D52A000C07002706F0 /* Project object */;
 }
