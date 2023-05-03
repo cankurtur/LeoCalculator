@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "leocalculation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/cankurtur/LeoCalculation.git",
+      "state" : {
+        "revision" : "1c225b9d02289978d42c974aebec8e324f20581d",
+        "version" : "1.0.3"
+      }
+    }
+  ],
+  "version" : 2
+}
