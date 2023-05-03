@@ -194,9 +194,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="icj-x5-eSm" id="DY7-j5-CnF"/>
+                        <outlet property="bitcoinButton" destination="R6W-6i-WDT" id="05a-MV-Qnf"/>
                         <outlet property="clearButton" destination="T1V-cO-uGp" id="JpL-Hf-EUb"/>
+                        <outlet property="cosButton" destination="ZR6-aV-p8j" id="jkV-L5-xA7"/>
+                        <outlet property="divideButton" destination="Nmx-e9-Fa3" id="j6Y-SB-muy"/>
                         <outlet property="equalButton" destination="5g4-gp-chE" id="C1O-J9-ggi"/>
+                        <outlet property="multiplyButton" destination="1qW-Tf-qbU" id="lD1-Da-5Rg"/>
                         <outlet property="resultLabel" destination="yf8-vB-3If" id="OD3-mz-VZx"/>
+                        <outlet property="sinButton" destination="49s-YP-QVQ" id="aLt-Ug-9iV"/>
+                        <outlet property="subtractButton" destination="Xk2-BN-aPT" id="1xx-Kr-5rc"/>
                         <outletCollection property="numpadButtons" destination="Jtd-zP-O7h" collectionClass="NSMutableArray" id="jL0-9U-gkX"/>
                         <outletCollection property="numpadButtons" destination="Fdb-pk-4iV" collectionClass="NSMutableArray" id="PRA-1Z-3sC"/>
                         <outletCollection property="numpadButtons" destination="BVD-Fi-dNk" collectionClass="NSMutableArray" id="pCe-UW-QJY"/>
@@ -208,13 +215,6 @@
                         <outletCollection property="numpadButtons" destination="wW1-sb-9o5" collectionClass="NSMutableArray" id="rpa-k7-adt"/>
                         <outletCollection property="numpadButtons" destination="uEG-bW-daj" collectionClass="NSMutableArray" id="Lpc-UG-4pw"/>
                         <outletCollection property="numpadButtons" destination="scU-GI-gGA" collectionClass="NSMutableArray" id="1Zk-PN-7h6"/>
-                        <outletCollection property="basicOperationButtons" destination="1qW-Tf-qbU" collectionClass="NSMutableArray" id="upa-KI-nBu"/>
-                        <outletCollection property="basicOperationButtons" destination="Nmx-e9-Fa3" collectionClass="NSMutableArray" id="gCK-Sy-L1h"/>
-                        <outletCollection property="basicOperationButtons" destination="icj-x5-eSm" collectionClass="NSMutableArray" id="54J-Wu-jEq"/>
-                        <outletCollection property="basicOperationButtons" destination="Xk2-BN-aPT" collectionClass="NSMutableArray" id="zKy-mT-maV"/>
-                        <outletCollection property="extraOperationButtons" destination="49s-YP-QVQ" collectionClass="NSMutableArray" id="98C-6k-y43"/>
-                        <outletCollection property="extraOperationButtons" destination="ZR6-aV-p8j" collectionClass="NSMutableArray" id="UR8-bm-Uiv"/>
-                        <outletCollection property="extraOperationButtons" destination="R6W-6i-WDT" collectionClass="NSMutableArray" id="Y7M-On-Zu7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
