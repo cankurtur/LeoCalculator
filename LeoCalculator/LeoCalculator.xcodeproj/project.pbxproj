@@ -28,6 +28,7 @@
 		2525C22E2A0024F0002706F0 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C22D2A0024F0002706F0 /* Storyboarded.swift */; };
 		2525C2302A002504002706F0 /* StoryboardNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C22F2A002504002706F0 /* StoryboardNames.swift */; };
 		2525C2322A003576002706F0 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C2312A003576002706F0 /* UIFontExtension.swift */; };
+		25D792AC2A0263A9000CC7FA /* LeoCalculation in Frameworks */ = {isa = PBXBuildFile; productRef = 25D792AB2A0263A9000CC7FA /* LeoCalculation */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25D792AC2A0263A9000CC7FA /* LeoCalculation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +237,9 @@
 			dependencies = (
 			);
 			name = LeoCalculator;
+			packageProductDependencies = (
+				25D792AB2A0263A9000CC7FA /* LeoCalculation */,
+			);
 			productName = LeoCalculator;
 			productReference = 2525C1DD2A000C07002706F0 /* LeoCalculator.app */;
 			productType = "com.apple.product-type.application";
@@ -307,6 +312,9 @@
 				Base,
 			);
 			mainGroup = 2525C1D42A000C07002706F0;
+			packageReferences = (
+				25D792AA2A0263A9000CC7FA /* XCRemoteSwiftPackageReference "LeoCalculation" */,
+			);
 			productRefGroup = 2525C1DE2A000C07002706F0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -698,6 +706,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		25D792AA2A0263A9000CC7FA /* XCRemoteSwiftPackageReference "LeoCalculation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cankurtur/LeoCalculation.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		25D792AB2A0263A9000CC7FA /* LeoCalculation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25D792AA2A0263A9000CC7FA /* XCRemoteSwiftPackageReference "LeoCalculation" */;
+			productName = LeoCalculation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2525C1D52A000C07002706F0 /* Project object */;
 }

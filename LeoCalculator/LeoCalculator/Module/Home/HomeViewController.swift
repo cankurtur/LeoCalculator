@@ -38,12 +38,27 @@ private enum Constant {
         static let backgroundColor: UIColor = .darkGray
         static let cornerRadius: CGFloat = 8
     }
+    
+    enum ClearButton {
+        static let titleFont: UIFont = .bold20
+        static let titleColor: UIColor = .black
+        static let backgroundColor: UIColor = .darkGray
+        static let cornerRadius: CGFloat = 22
+    }
+    
+    enum EqualButton {
+        static let titleFont: UIFont = .bold20
+        static let titleColor: UIColor = .black
+        static let backgroundColor: UIColor = .darkGray
+        static let cornerRadius: CGFloat = 8
+    }
 }
 
 // MARK: - ViewInterface
 
 protocol HomeViewInterface: ViewInterface {
     func prepareUI()
+    func setResultLabel(with result: String)
 }
 
 // MARK: - HomeViewController
@@ -54,7 +69,9 @@ final class HomeViewController: UIViewController, Storyboarded {
     @IBOutlet private var numpadButtons: [UIButton]!
     @IBOutlet private var basicOperationButtons: [UIButton]!
     @IBOutlet private var extraOperationButtons: [UIButton]!
-    
+    @IBOutlet private weak var clearButton: UIButton!
+    @IBOutlet private weak var equalButton: UIButton!
+  
     static var storyboardName: StoryboardNames {
         return .home
     }
@@ -77,6 +94,10 @@ extension HomeViewController: HomeViewInterface {
         prepareLabels()
         prepareButtons()
     }
+    
+    func setResultLabel(with result: String) {
+        resultLabel.text = result
+    }
 }
 
 // MARK: - Prepares
@@ -98,7 +119,7 @@ private extension HomeViewController {
             button.layer.cornerRadius = Constant.NumpadButtons.cornerRadius
             button.addTarget(self, action: #selector(numpadButtonTapped(_:)), for: .touchUpInside)
         }
-
+        
         basicOperationButtons.forEach { button in
             button.titleLabel?.font = Constant.BasicOperationButtons.titleFont
             button.setTitleColor(Constant.BasicOperationButtons.titleColor, for: .normal)
@@ -114,6 +135,18 @@ private extension HomeViewController {
             button.layer.cornerRadius = Constant.ExtraOperationButtons.cornerRadius
             button.addTarget(self, action: #selector(extraOperationsTapped(_:)), for: .touchUpInside)
         }
+        
+        clearButton.titleLabel?.font = Constant.ClearButton.titleFont
+        clearButton.setTitleColor(Constant.ClearButton.titleColor, for: .normal)
+        clearButton.backgroundColor = Constant.ClearButton.backgroundColor
+        clearButton.layer.cornerRadius = Constant.ClearButton.cornerRadius
+        clearButton.addTarget(self, action: #selector(clearButtonTapped), for: .touchUpInside)
+        
+        equalButton.titleLabel?.font = Constant.EqualButton.titleFont
+        equalButton.setTitleColor(Constant.EqualButton.titleColor, for: .normal)
+        equalButton.backgroundColor = Constant.EqualButton.backgroundColor
+        equalButton.layer.cornerRadius = Constant.EqualButton.cornerRadius
+        equalButton.addTarget(self, action: #selector(equalButtonTapped), for: .touchUpInside)
     }
 }
 
@@ -130,6 +163,14 @@ private extension HomeViewController {
     }
     
     func extraOperationsTapped(_ sender: UIButton) {
-        presenter.extraOperationsTapped(title: sender.titleLabel?.text)
+        presenter.extraOperationsTapped(operation: sender.titleLabel?.text)
+    }
+    
+    func clearButtonTapped() {
+        presenter.clearButtonTapped()
+    }
+    
+    func equalButtonTapped() {
+        presenter.equalButtonTapped()
     }
 }
