@@ -11,3 +11,4 @@ import LeoNetworking
 public typealias EmptyResponse = LeoNetworking.EmptyResponse
 public typealias APIClientError = LeoNetworking.APIClientError
 public typealias NetworkManagerProtocol = LeoNetworking.NetworkManagerProtocol
+public typealias BaseError = LeoNetworking.BaseError

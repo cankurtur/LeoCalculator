@@ -181,9 +181,9 @@ private extension HomePresenter {
 
 extension HomePresenter: HomeInteractorOutput {
     func onGetConversionResultReceived(_ result: Result<ConversionResultResponse, APIClientError>) {
+        view?.dismissHUD()
         switch result {
         case .success(let response):
-            view?.dismissHUD()
             guard let convertedAmount = response.convertedAmount else {
                 return
             }
