@@ -16,6 +16,7 @@ protocol HomePresenterInterface: PresenterInterface {
     func extraOperationsTapped(operation: String?)
     func clearButtonTapped()
     func equalButtonTapped()
+    func bitcoinButtonTapped()
     func didChangeValueOfSwitch(_ isOn: Bool)
 }
 
@@ -138,6 +139,22 @@ extension HomePresenter: HomePresenterInterface {
         view?.setResultLabel(with: "\(result)")
     }
     
+    func bitcoinButtonTapped() {
+        
+        // The base API doesn't support the current date rate on the free version, which is why twoDaysBefore's value was created.
+        let twoDaysBefore = Date().twoDaysBefore.toString()
+        
+        if currentNumber > 0 {
+            interactor.getConversionResult(amount: Float(currentNumber), date: twoDaysBefore)
+            return
+        }
+        
+        if resultNumber > 0 {
+            interactor.getConversionResult(amount: Float(resultNumber), date: twoDaysBefore)
+            return
+        }
+    }
+    
     func didChangeValueOfSwitch(_ isOn: Bool) {
         let theme = isOn ? Theme.red : Theme.original
         compositionRoot.themeManager.changeCurrentTheme(with: theme)
@@ -160,4 +177,21 @@ private extension HomePresenter {
 
 // MARK: - HomeInteractorOutput
 
-extension HomePresenter: HomeInteractorOutput { }
+extension HomePresenter: HomeInteractorOutput {
+    func onGetConversionResultReceived(_ result: Result<ConversionResultResponse, APIClientError>) {
+        switch result {
+        case .success(let response):
+            
+            guard let convertedAmount = response.convertedAmount else {
+                return
+            }
+            
+            view?.setResultLabel(with: "\(convertedAmount)")
+            resetCalculation()
+        case .failure(let error):
+            print(error)
+            // TODO: - Error handling will be add.
+            break
+        }
+    }
+}

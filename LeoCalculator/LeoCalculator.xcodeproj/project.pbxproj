@@ -28,6 +28,17 @@
 		2525C22E2A0024F0002706F0 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C22D2A0024F0002706F0 /* Storyboarded.swift */; };
 		2525C2302A002504002706F0 /* StoryboardNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C22F2A002504002706F0 /* StoryboardNames.swift */; };
 		2525C2322A003576002706F0 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C2312A003576002706F0 /* UIFontExtension.swift */; };
+		253E6ED02A04022E003714A6 /* LeoNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 253E6ECF2A04022E003714A6 /* LeoNetworking */; };
+		253E6ED32A04689B003714A6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E6ED22A04689B003714A6 /* Endpoint.swift */; };
+		253E6ED52A046962003714A6 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 253E6ED42A046962003714A6 /* Config.plist */; };
+		253E6ED72A0469E6003714A6 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E6ED62A0469E6003714A6 /* Config.swift */; };
+		253E6ED92A046B34003714A6 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E6ED82A046B34003714A6 /* BaseURL.swift */; };
+		253E6EDB2A046CB3003714A6 /* ClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E6EDA2A046CB3003714A6 /* ClientError.swift */; };
+		253E6EDF2A046DC8003714A6 /* ConvertingCurrenciesEndpointItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E6EDE2A046DC8003714A6 /* ConvertingCurrenciesEndpointItem.swift */; };
+		253E6EE32A0472DC003714A6 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E6EE22A0472DC003714A6 /* Typealias.swift */; };
+		253E6EE52A0473DC003714A6 /* ConversionResultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E6EE42A0473DC003714A6 /* ConversionResultResponse.swift */; };
+		253E6EE72A047641003714A6 /* Currencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E6EE62A047641003714A6 /* Currencies.swift */; };
+		253E6EE92A0478A2003714A6 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E6EE82A0478A2003714A6 /* DateExtension.swift */; };
 		25D792AC2A0263A9000CC7FA /* LeoCalculation in Frameworks */ = {isa = PBXBuildFile; productRef = 25D792AB2A0263A9000CC7FA /* LeoCalculation */; };
 		25D792B22A02EEF4000CC7FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25D792B12A02EEF4000CC7FA /* GoogleService-Info.plist */; };
 		25D792B52A02EF3A000CC7FA /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 25D792B42A02EF3A000CC7FA /* FirebaseAnalytics */; };
@@ -89,6 +100,16 @@
 		2525C22D2A0024F0002706F0 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		2525C22F2A002504002706F0 /* StoryboardNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardNames.swift; sourceTree = "<group>"; };
 		2525C2312A003576002706F0 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
+		253E6ED22A04689B003714A6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		253E6ED42A046962003714A6 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		253E6ED62A0469E6003714A6 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		253E6ED82A046B34003714A6 /* BaseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
+		253E6EDA2A046CB3003714A6 /* ClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientError.swift; sourceTree = "<group>"; };
+		253E6EDE2A046DC8003714A6 /* ConvertingCurrenciesEndpointItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertingCurrenciesEndpointItem.swift; sourceTree = "<group>"; };
+		253E6EE22A0472DC003714A6 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
+		253E6EE42A0473DC003714A6 /* ConversionResultResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionResultResponse.swift; sourceTree = "<group>"; };
+		253E6EE62A047641003714A6 /* Currencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currencies.swift; sourceTree = "<group>"; };
+		253E6EE82A0478A2003714A6 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		25D792B12A02EEF4000CC7FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		25D792C32A02EF55000CC7FA /* RCManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCManager.swift; sourceTree = "<group>"; };
 		25D792C52A02F34B000CC7FA /* CompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionRoot.swift; sourceTree = "<group>"; };
@@ -109,6 +130,7 @@
 				25D792BB2A02EF3A000CC7FA /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				25D792B52A02EF3A000CC7FA /* FirebaseAnalytics in Frameworks */,
 				25D792BF2A02EF3A000CC7FA /* FirebaseRemoteConfig in Frameworks */,
+				253E6ED02A04022E003714A6 /* LeoNetworking in Frameworks */,
 				25D792BD2A02EF3A000CC7FA /* FirebaseCrashlytics in Frameworks */,
 				25D792B72A02EF3A000CC7FA /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				25D792AC2A0263A9000CC7FA /* LeoCalculation in Frameworks */,
@@ -157,6 +179,8 @@
 			children = (
 				2525C2102A000D7A002706F0 /* App */,
 				2525C2112A000D82002706F0 /* Module */,
+				253E6ED12A04688B003714A6 /* Networking */,
+				253E6EDC2A046DA9003714A6 /* Rest */,
 				2525C2162A000E84002706F0 /* Extensions */,
 				25D792C22A02EF49000CC7FA /* Utils */,
 				2525C2122A000D8B002706F0 /* Resources */,
@@ -190,6 +214,7 @@
 				2525C1E02A000C07002706F0 /* AppDelegate.swift */,
 				2525C1E22A000C07002706F0 /* SceneDelegate.swift */,
 				25D792C52A02F34B000CC7FA /* CompositionRoot.swift */,
+				253E6ED42A046962003714A6 /* Config.plist */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -229,6 +254,7 @@
 			children = (
 				2525C2172A000E92002706F0 /* NSObjectExtension.swift */,
 				2525C2312A003576002706F0 /* UIFontExtension.swift */,
+				253E6EE82A0478A2003714A6 /* DateExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -255,11 +281,41 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		253E6ED12A04688B003714A6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				253E6ED22A04689B003714A6 /* Endpoint.swift */,
+				253E6ED82A046B34003714A6 /* BaseURL.swift */,
+				253E6EDA2A046CB3003714A6 /* ClientError.swift */,
+				253E6EE22A0472DC003714A6 /* Typealias.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		253E6EDC2A046DA9003714A6 /* Rest */ = {
+			isa = PBXGroup;
+			children = (
+				253E6EDD2A046DAF003714A6 /* ConvertingCurrencies */,
+			);
+			path = Rest;
+			sourceTree = "<group>";
+		};
+		253E6EDD2A046DAF003714A6 /* ConvertingCurrencies */ = {
+			isa = PBXGroup;
+			children = (
+				253E6EDE2A046DC8003714A6 /* ConvertingCurrenciesEndpointItem.swift */,
+				253E6EE42A0473DC003714A6 /* ConversionResultResponse.swift */,
+				253E6EE62A047641003714A6 /* Currencies.swift */,
+			);
+			path = ConvertingCurrencies;
+			sourceTree = "<group>";
+		};
 		25D792C22A02EF49000CC7FA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				25D792C72A0300C3000CC7FA /* AppThemeManager */,
 				25D792C32A02EF55000CC7FA /* RCManager.swift */,
+				253E6ED62A0469E6003714A6 /* Config.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -308,6 +364,7 @@
 				25D792BC2A02EF3A000CC7FA /* FirebaseCrashlytics */,
 				25D792BE2A02EF3A000CC7FA /* FirebaseRemoteConfig */,
 				25D792C02A02EF3A000CC7FA /* FirebaseRemoteConfigSwift */,
+				253E6ECF2A04022E003714A6 /* LeoNetworking */,
 			);
 			productName = LeoCalculator;
 			productReference = 2525C1DD2A000C07002706F0 /* LeoCalculator.app */;
@@ -384,6 +441,7 @@
 			packageReferences = (
 				25D792AA2A0263A9000CC7FA /* XCRemoteSwiftPackageReference "LeoCalculation" */,
 				25D792B32A02EF3A000CC7FA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				253E6ECE2A04022D003714A6 /* XCRemoteSwiftPackageReference "LeoNetworking" */,
 			);
 			productRefGroup = 2525C1DE2A000C07002706F0 /* Products */;
 			projectDirPath = "";
@@ -404,6 +462,7 @@
 				2525C22C2A002440002706F0 /* Home.storyboard in Resources */,
 				25D792B22A02EEF4000CC7FA /* GoogleService-Info.plist in Resources */,
 				2525C1ED2A000C08002706F0 /* LaunchScreen.storyboard in Resources */,
+				253E6ED52A046962003714A6 /* Config.plist in Resources */,
 				2525C1EA2A000C08002706F0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,14 +489,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				2525C21E2A000F3B002706F0 /* InteractorInterface.swift in Sources */,
+				253E6EDB2A046CB3003714A6 /* ClientError.swift in Sources */,
 				2525C2322A003576002706F0 /* UIFontExtension.swift in Sources */,
 				2525C2182A000E92002706F0 /* NSObjectExtension.swift in Sources */,
+				253E6EE92A0478A2003714A6 /* DateExtension.swift in Sources */,
 				2525C2272A0014CF002706F0 /* HomeInteractor.swift in Sources */,
+				253E6ED92A046B34003714A6 /* BaseURL.swift in Sources */,
+				253E6EE32A0472DC003714A6 /* Typealias.swift in Sources */,
 				25D792CB2A0301DC000CC7FA /* Themes.swift in Sources */,
+				253E6ED72A0469E6003714A6 /* Config.swift in Sources */,
 				2525C2152A000E70002706F0 /* BaseViewController.swift in Sources */,
+				253E6EE52A0473DC003714A6 /* ConversionResultResponse.swift in Sources */,
 				2525C1E12A000C07002706F0 /* AppDelegate.swift in Sources */,
 				25D792CD2A030353000CC7FA /* ThemeManager.swift in Sources */,
 				2525C22E2A0024F0002706F0 /* Storyboarded.swift in Sources */,
+				253E6EDF2A046DC8003714A6 /* ConvertingCurrenciesEndpointItem.swift in Sources */,
 				2525C2292A0014D5002706F0 /* HomeRouter.swift in Sources */,
 				2525C2232A0014BE002706F0 /* HomeViewController.swift in Sources */,
 				25D792CF2A03063D000CC7FA /* HomeUIModel.swift in Sources */,
@@ -446,6 +512,8 @@
 				25D792D22A031C5C000CC7FA /* HomeHiddenModel.swift in Sources */,
 				2525C1E32A000C07002706F0 /* SceneDelegate.swift in Sources */,
 				2525C2202A000F46002706F0 /* RouterInterface.swift in Sources */,
+				253E6ED32A04689B003714A6 /* Endpoint.swift in Sources */,
+				253E6EE72A047641003714A6 /* Currencies.swift in Sources */,
 				25D792C62A02F34B000CC7FA /* CompositionRoot.swift in Sources */,
 				2525C2302A002504002706F0 /* StoryboardNames.swift in Sources */,
 				25D792C92A0300E9000CC7FA /* ThemeProtocol.swift in Sources */,
@@ -786,6 +854,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		253E6ECE2A04022D003714A6 /* XCRemoteSwiftPackageReference "LeoNetworking" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cankurtur/LeoNetworking.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
 		25D792AA2A0263A9000CC7FA /* XCRemoteSwiftPackageReference "LeoCalculation" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/cankurtur/LeoCalculation.git";
@@ -805,6 +881,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		253E6ECF2A04022E003714A6 /* LeoNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 253E6ECE2A04022D003714A6 /* XCRemoteSwiftPackageReference "LeoNetworking" */;
+			productName = LeoNetworking;
+		};
 		25D792AB2A0263A9000CC7FA /* LeoCalculation */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 25D792AA2A0263A9000CC7FA /* XCRemoteSwiftPackageReference "LeoCalculation" */;
