@@ -8,6 +8,5 @@
 import LeoNetworking
 
 public class ClientError: APIError {
-    public var message: String
-    public var statusCode: Int?
+    public var error: BaseError
 }
