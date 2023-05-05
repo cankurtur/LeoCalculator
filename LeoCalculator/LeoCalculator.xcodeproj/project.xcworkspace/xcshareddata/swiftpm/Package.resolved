@@ -73,6 +73,15 @@
       }
     },
     {
+      "identity" : "leonetworking",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/cankurtur/LeoNetworking.git",
+      "state" : {
+        "revision" : "ee07a6c84590263d7d262f389a49e2af7bdf4e60",
+        "version" : "1.0.1"
+      }
+    },
+    {
       "identity" : "leveldb",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/leveldb.git",
