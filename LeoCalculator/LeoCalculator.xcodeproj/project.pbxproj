@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25132E412A05651E00A8C155 /* LeoNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 25132E402A05651E00A8C155 /* LeoNetworking */; };
 		2525C1E12A000C07002706F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C1E02A000C07002706F0 /* AppDelegate.swift */; };
 		2525C1E32A000C07002706F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C1E22A000C07002706F0 /* SceneDelegate.swift */; };
 		2525C1EA2A000C08002706F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2525C1E92A000C08002706F0 /* Assets.xcassets */; };
@@ -28,7 +29,6 @@
 		2525C22E2A0024F0002706F0 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C22D2A0024F0002706F0 /* Storyboarded.swift */; };
 		2525C2302A002504002706F0 /* StoryboardNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C22F2A002504002706F0 /* StoryboardNames.swift */; };
 		2525C2322A003576002706F0 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C2312A003576002706F0 /* UIFontExtension.swift */; };
-		253E6ED02A04022E003714A6 /* LeoNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 253E6ECF2A04022E003714A6 /* LeoNetworking */; };
 		253E6ED32A04689B003714A6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E6ED22A04689B003714A6 /* Endpoint.swift */; };
 		253E6ED52A046962003714A6 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 253E6ED42A046962003714A6 /* Config.plist */; };
 		253E6ED72A0469E6003714A6 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E6ED62A0469E6003714A6 /* Config.swift */; };
@@ -138,8 +138,8 @@
 				25D792BB2A02EF3A000CC7FA /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				25D792B52A02EF3A000CC7FA /* FirebaseAnalytics in Frameworks */,
 				25D792BF2A02EF3A000CC7FA /* FirebaseRemoteConfig in Frameworks */,
-				253E6ED02A04022E003714A6 /* LeoNetworking in Frameworks */,
 				25D792BD2A02EF3A000CC7FA /* FirebaseCrashlytics in Frameworks */,
+				25132E412A05651E00A8C155 /* LeoNetworking in Frameworks */,
 				25D792B72A02EF3A000CC7FA /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				25D792AC2A0263A9000CC7FA /* LeoCalculation in Frameworks */,
 			);
@@ -375,8 +375,8 @@
 				25D792BC2A02EF3A000CC7FA /* FirebaseCrashlytics */,
 				25D792BE2A02EF3A000CC7FA /* FirebaseRemoteConfig */,
 				25D792C02A02EF3A000CC7FA /* FirebaseRemoteConfigSwift */,
-				253E6ECF2A04022E003714A6 /* LeoNetworking */,
 				253E6EEB2A0481E5003714A6 /* MBProgressHUD */,
+				25132E402A05651E00A8C155 /* LeoNetworking */,
 			);
 			productName = LeoCalculator;
 			productReference = 2525C1DD2A000C07002706F0 /* LeoCalculator.app */;
@@ -453,8 +453,8 @@
 			packageReferences = (
 				25D792AA2A0263A9000CC7FA /* XCRemoteSwiftPackageReference "LeoCalculation" */,
 				25D792B32A02EF3A000CC7FA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				253E6ECE2A04022D003714A6 /* XCRemoteSwiftPackageReference "LeoNetworking" */,
 				253E6EEA2A0481E5003714A6 /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
+				25132E3F2A05651E00A8C155 /* XCRemoteSwiftPackageReference "LeoNetworking" */,
 			);
 			productRefGroup = 2525C1DE2A000C07002706F0 /* Products */;
 			projectDirPath = "";
@@ -870,12 +870,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		253E6ECE2A04022D003714A6 /* XCRemoteSwiftPackageReference "LeoNetworking" */ = {
+		25132E3F2A05651E00A8C155 /* XCRemoteSwiftPackageReference "LeoNetworking" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/cankurtur/LeoNetworking.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.1;
+				minimumVersion = 1.0.7;
 			};
 		};
 		253E6EEA2A0481E5003714A6 /* XCRemoteSwiftPackageReference "MBProgressHUD" */ = {
@@ -905,9 +905,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		253E6ECF2A04022E003714A6 /* LeoNetworking */ = {
+		25132E402A05651E00A8C155 /* LeoNetworking */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 253E6ECE2A04022D003714A6 /* XCRemoteSwiftPackageReference "LeoNetworking" */;
+			package = 25132E3F2A05651E00A8C155 /* XCRemoteSwiftPackageReference "LeoNetworking" */;
 			productName = LeoNetworking;
 		};
 		253E6EEB2A0481E5003714A6 /* MBProgressHUD */ = {
