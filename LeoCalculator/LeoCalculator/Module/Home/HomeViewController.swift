@@ -206,7 +206,7 @@ private extension HomeViewController {
 
         bitcoinButton.titleLabel?.font = Constant.ExtraOperationButtons.titleFont
         bitcoinButton.layer.cornerRadius = Constant.ExtraOperationButtons.cornerRadius
-        bitcoinButton.addTarget(self, action: #selector(extraOperationsTapped(_:)), for: .touchUpInside)
+        bitcoinButton.addTarget(self, action: #selector(bitcoinButtonTapped), for: .touchUpInside)
 
         clearButton.titleLabel?.font = Constant.ClearButton.titleFont
         clearButton.layer.cornerRadius = Constant.ClearButton.cornerRadius
@@ -248,6 +248,10 @@ private extension HomeViewController {
     
     func equalButtonTapped() {
         presenter.equalButtonTapped()
+    }
+    
+    func bitcoinButtonTapped() {
+        presenter.bitcoinButtonTapped()
     }
     
     func didChangeValue(_ sender: UISwitch) {
