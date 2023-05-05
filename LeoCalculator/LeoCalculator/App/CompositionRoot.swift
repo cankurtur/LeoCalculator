@@ -6,10 +6,17 @@
 //
 
 import Foundation
+import LeoNetworking
 
 final class CompositionRoot {
     
     static let shared = CompositionRoot()
+    
+    lazy var networkManager: NetworkManagerProtocol = {
+        return NetworkManager(
+            clientErrorType: ClientError.self
+        )
+    }()
     
     lazy var rcManager: RCManagerInterface = {
         return RCManager.shared
