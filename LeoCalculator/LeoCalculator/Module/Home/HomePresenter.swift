@@ -145,11 +145,13 @@ extension HomePresenter: HomePresenterInterface {
         let twoDaysBefore = Date().twoDaysBefore.toString()
         
         if currentNumber > 0 {
+            view?.showHUD()
             interactor.getConversionResult(amount: Float(currentNumber), date: twoDaysBefore)
             return
         }
         
         if resultNumber > 0 {
+            view?.showHUD()
             interactor.getConversionResult(amount: Float(resultNumber), date: twoDaysBefore)
             return
         }
@@ -181,7 +183,7 @@ extension HomePresenter: HomeInteractorOutput {
     func onGetConversionResultReceived(_ result: Result<ConversionResultResponse, APIClientError>) {
         switch result {
         case .success(let response):
-            
+            view?.dismissHUD()
             guard let convertedAmount = response.convertedAmount else {
                 return
             }
