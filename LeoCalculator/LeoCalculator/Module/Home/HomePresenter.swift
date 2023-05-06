@@ -191,9 +191,7 @@ extension HomePresenter: HomeInteractorOutput {
             view?.setResultLabel(with: "\(convertedAmount)")
             resetCalculation()
         case .failure(let error):
-            print(error)
-            // TODO: - Error handling will be add.
-            break
+            view?.showPopup(error: error, buttonAction: nil)
         }
     }
 }
