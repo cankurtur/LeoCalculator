@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		25132E412A05651E00A8C155 /* LeoNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 25132E402A05651E00A8C155 /* LeoNetworking */; };
+		25132E482A05CCFB00A8C155 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 25132E472A05CCFB00A8C155 /* SwiftMessages */; };
+		25132E4C2A05CD3E00A8C155 /* AppPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25132E4B2A05CD3E00A8C155 /* AppPopupView.swift */; };
+		25132E4E2A05CD4D00A8C155 /* AppPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25132E4D2A05CD4D00A8C155 /* AppPopupView.xib */; };
+		25132E502A05CD7E00A8C155 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25132E4F2A05CD7E00A8C155 /* NibView.swift */; };
+		25132E522A05CD9A00A8C155 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25132E512A05CD9A00A8C155 /* UIViewExtension.swift */; };
+		25132E542A05CEE100A8C155 /* AppPopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25132E532A05CEE100A8C155 /* AppPopupViewModel.swift */; };
+		25132E562A05CF4B00A8C155 /* SwiftMessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25132E552A05CF4B00A8C155 /* SwiftMessagesManager.swift */; };
+		25132E582A05CFFC00A8C155 /* DefaultAppPopupState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25132E572A05CFFC00A8C155 /* DefaultAppPopupState.swift */; };
 		2525C1E12A000C07002706F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C1E02A000C07002706F0 /* AppDelegate.swift */; };
 		2525C1E32A000C07002706F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C1E22A000C07002706F0 /* SceneDelegate.swift */; };
 		2525C1EA2A000C08002706F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2525C1E92A000C08002706F0 /* Assets.xcassets */; };
@@ -79,6 +87,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25132E4B2A05CD3E00A8C155 /* AppPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPopupView.swift; sourceTree = "<group>"; };
+		25132E4D2A05CD4D00A8C155 /* AppPopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppPopupView.xib; sourceTree = "<group>"; };
+		25132E4F2A05CD7E00A8C155 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
+		25132E512A05CD9A00A8C155 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		25132E532A05CEE100A8C155 /* AppPopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPopupViewModel.swift; sourceTree = "<group>"; };
+		25132E552A05CF4B00A8C155 /* SwiftMessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMessagesManager.swift; sourceTree = "<group>"; };
+		25132E572A05CFFC00A8C155 /* DefaultAppPopupState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAppPopupState.swift; sourceTree = "<group>"; };
 		2525C1DD2A000C07002706F0 /* LeoCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeoCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2525C1E02A000C07002706F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2525C1E22A000C07002706F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +154,7 @@
 				25D792B52A02EF3A000CC7FA /* FirebaseAnalytics in Frameworks */,
 				25D792BF2A02EF3A000CC7FA /* FirebaseRemoteConfig in Frameworks */,
 				25D792BD2A02EF3A000CC7FA /* FirebaseCrashlytics in Frameworks */,
+				25132E482A05CCFB00A8C155 /* SwiftMessages in Frameworks */,
 				25132E412A05651E00A8C155 /* LeoNetworking in Frameworks */,
 				25D792B72A02EF3A000CC7FA /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				25D792AC2A0263A9000CC7FA /* LeoCalculation in Frameworks */,
@@ -162,6 +178,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25132E492A05CD1A00A8C155 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				25132E4A2A05CD2700A8C155 /* AppPopupView */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		25132E4A2A05CD2700A8C155 /* AppPopupView */ = {
+			isa = PBXGroup;
+			children = (
+				25132E4B2A05CD3E00A8C155 /* AppPopupView.swift */,
+				25132E4D2A05CD4D00A8C155 /* AppPopupView.xib */,
+				25132E532A05CEE100A8C155 /* AppPopupViewModel.swift */,
+				25132E572A05CFFC00A8C155 /* DefaultAppPopupState.swift */,
+			);
+			path = AppPopupView;
+			sourceTree = "<group>";
+		};
 		2525C1D42A000C07002706F0 = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +222,7 @@
 			children = (
 				2525C2102A000D7A002706F0 /* App */,
 				2525C2112A000D82002706F0 /* Module */,
+				25132E492A05CD1A00A8C155 /* Components */,
 				253E6ED12A04688B003714A6 /* Networking */,
 				253E6EDC2A046DA9003714A6 /* Rest */,
 				2525C2162A000E84002706F0 /* Extensions */,
@@ -264,6 +300,7 @@
 				2525C2172A000E92002706F0 /* NSObjectExtension.swift */,
 				2525C2312A003576002706F0 /* UIFontExtension.swift */,
 				253E6EE82A0478A2003714A6 /* DateExtension.swift */,
+				25132E512A05CD9A00A8C155 /* UIViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -327,6 +364,8 @@
 				253E6ED62A0469E6003714A6 /* Config.swift */,
 				253E6EED2A04822A003714A6 /* HUDManager.swift */,
 				253E6EF12A048362003714A6 /* Localizable.swift */,
+				25132E4F2A05CD7E00A8C155 /* NibView.swift */,
+				25132E552A05CF4B00A8C155 /* SwiftMessagesManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -377,6 +416,7 @@
 				25D792C02A02EF3A000CC7FA /* FirebaseRemoteConfigSwift */,
 				253E6EEB2A0481E5003714A6 /* MBProgressHUD */,
 				25132E402A05651E00A8C155 /* LeoNetworking */,
+				25132E472A05CCFB00A8C155 /* SwiftMessages */,
 			);
 			productName = LeoCalculator;
 			productReference = 2525C1DD2A000C07002706F0 /* LeoCalculator.app */;
@@ -455,6 +495,7 @@
 				25D792B32A02EF3A000CC7FA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				253E6EEA2A0481E5003714A6 /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
 				25132E3F2A05651E00A8C155 /* XCRemoteSwiftPackageReference "LeoNetworking" */,
+				25132E462A05CCFB00A8C155 /* XCRemoteSwiftPackageReference "SwiftMessages" */,
 			);
 			productRefGroup = 2525C1DE2A000C07002706F0 /* Products */;
 			projectDirPath = "";
@@ -474,6 +515,7 @@
 			files = (
 				2525C22C2A002440002706F0 /* Home.storyboard in Resources */,
 				253E6EF02A04832B003714A6 /* Localizable.strings in Resources */,
+				25132E4E2A05CD4D00A8C155 /* AppPopupView.xib in Resources */,
 				25D792B22A02EEF4000CC7FA /* GoogleService-Info.plist in Resources */,
 				2525C1ED2A000C08002706F0 /* LaunchScreen.storyboard in Resources */,
 				253E6ED52A046962003714A6 /* Config.plist in Resources */,
@@ -504,10 +546,12 @@
 			files = (
 				2525C21E2A000F3B002706F0 /* InteractorInterface.swift in Sources */,
 				253E6EDB2A046CB3003714A6 /* ClientError.swift in Sources */,
+				25132E582A05CFFC00A8C155 /* DefaultAppPopupState.swift in Sources */,
 				2525C2322A003576002706F0 /* UIFontExtension.swift in Sources */,
 				2525C2182A000E92002706F0 /* NSObjectExtension.swift in Sources */,
 				253E6EE92A0478A2003714A6 /* DateExtension.swift in Sources */,
 				2525C2272A0014CF002706F0 /* HomeInteractor.swift in Sources */,
+				25132E522A05CD9A00A8C155 /* UIViewExtension.swift in Sources */,
 				253E6ED92A046B34003714A6 /* BaseURL.swift in Sources */,
 				253E6EEE2A04822A003714A6 /* HUDManager.swift in Sources */,
 				253E6EE32A0472DC003714A6 /* Typealias.swift in Sources */,
@@ -524,9 +568,12 @@
 				25D792CF2A03063D000CC7FA /* HomeUIModel.swift in Sources */,
 				2525C21A2A000F03002706F0 /* ViewInterface.swift in Sources */,
 				25D792C42A02EF55000CC7FA /* RCManager.swift in Sources */,
+				25132E562A05CF4B00A8C155 /* SwiftMessagesManager.swift in Sources */,
 				253E6EF22A048362003714A6 /* Localizable.swift in Sources */,
 				25D792D22A031C5C000CC7FA /* HomeHiddenModel.swift in Sources */,
 				2525C1E32A000C07002706F0 /* SceneDelegate.swift in Sources */,
+				25132E542A05CEE100A8C155 /* AppPopupViewModel.swift in Sources */,
+				25132E4C2A05CD3E00A8C155 /* AppPopupView.swift in Sources */,
 				2525C2202A000F46002706F0 /* RouterInterface.swift in Sources */,
 				253E6ED32A04689B003714A6 /* Endpoint.swift in Sources */,
 				253E6EE72A047641003714A6 /* Currencies.swift in Sources */,
@@ -535,6 +582,7 @@
 				25D792C92A0300E9000CC7FA /* ThemeProtocol.swift in Sources */,
 				2525C21C2A000F2D002706F0 /* PresenterInterface.swift in Sources */,
 				2525C2252A0014C4002706F0 /* HomePresenter.swift in Sources */,
+				25132E502A05CD7E00A8C155 /* NibView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -878,6 +926,14 @@
 				minimumVersion = 1.0.7;
 			};
 		};
+		25132E462A05CCFB00A8C155 /* XCRemoteSwiftPackageReference "SwiftMessages" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftKickMobile/SwiftMessages.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		253E6EEA2A0481E5003714A6 /* XCRemoteSwiftPackageReference "MBProgressHUD" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jdg/MBProgressHUD.git";
@@ -909,6 +965,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 25132E3F2A05651E00A8C155 /* XCRemoteSwiftPackageReference "LeoNetworking" */;
 			productName = LeoNetworking;
+		};
+		25132E472A05CCFB00A8C155 /* SwiftMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25132E462A05CCFB00A8C155 /* XCRemoteSwiftPackageReference "SwiftMessages" */;
+			productName = SwiftMessages;
 		};
 		253E6EEB2A0481E5003714A6 /* MBProgressHUD */ = {
 			isa = XCSwiftPackageProductDependency;
