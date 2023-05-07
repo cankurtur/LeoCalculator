@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MARK: - Theme
+
 enum Theme {
     case original
     case red
@@ -20,6 +22,8 @@ enum Theme {
         }
     }
 }
+
+// MARK: - ThemeManager
 
 final class ThemeManager {
     static let shared: ThemeManager = ThemeManager()

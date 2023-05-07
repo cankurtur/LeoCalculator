@@ -32,6 +32,7 @@ final class HomeInteractor {
 }
 
 // MARK: - HomeInteractorInterface
+
 extension HomeInteractor: HomeInteractorInterface {
 
     func getConversionResult(amount: Float, date: String) {

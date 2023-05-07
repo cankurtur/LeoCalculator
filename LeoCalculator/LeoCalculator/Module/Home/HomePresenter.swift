@@ -8,6 +8,16 @@
 import Foundation
 import LeoCalculation
 
+// MARK: - Constant
+
+private enum Constant {
+    static let emptyString: String = Localizable.generalEmpty
+    static let zero: String = Localizable.generalZero
+    static let point: String = Localizable.generalPoint
+    static let defaultValue: Double = 0
+    static let pointCount: Int = 1
+}
+
 // MARK: - PresenterInterface
 
 protocol HomePresenterInterface: PresenterInterface {
@@ -35,7 +45,7 @@ final class HomePresenter {
     var currentExtraOpertaion: ExtraOperations?
     var isOnTheFirstCalculation: Bool = false
     
-    var input: String = ""
+    var input: String = Constant.emptyString
     
     init(router: HomeRouterInterface,
          interactor: HomeInteractorInterface,
@@ -70,47 +80,35 @@ extension HomePresenter: HomePresenterInterface {
     func numpadButtonTapped(title: String?) {
         guard let number = title else { return }
         
-        if number == ".", input.contains(".") {
+        if number == Constant.point, input.contains(Constant.point) {
             return
         }
         
-        if input.count == 1, input.contains("0") {
-            input = ""
+        if input.count == Constant.pointCount, input.contains(Constant.zero) {
+            input = Constant.emptyString
         }
         
         input += number
-        currentNumber = Double(input) ?? 0
+        currentNumber = Double(input) ?? Constant.defaultValue
         view?.setResultLabel(with: input)
     }
     
     func basicOperationsTapped(operation: String?) {
         guard let operation = operation else { return }
-
+        
         if isOnTheFirstCalculation {
-            resultNumber  = currentBasicOperation?.makeOperation(previousNumber, currentNumber) ?? 0
+            resultNumber  = currentBasicOperation?.makeOperation(previousNumber, currentNumber) ?? Constant.defaultValue
             view?.setResultLabel(with: "\(resultNumber)")
-            isOnTheFirstCalculation = false
-            previousNumber = currentNumber
-            currentNumber = 0
-            input = ""
-            currentBasicOperation = BasicOperations.currentOperation(operation)
+            updateCalculation(isFirstCalculation: false, operation: operation)
         } else {
             
-            if resultNumber == 0.0 {
-                previousNumber = currentNumber
-                isOnTheFirstCalculation = true
-                input = ""
-                currentNumber = 0
-                currentBasicOperation = BasicOperations.currentOperation(operation)
+            if resultNumber == Constant.defaultValue {
+                updateCalculation(isFirstCalculation: true, operation: operation)
                 
             } else {
-                resultNumber  = currentBasicOperation?.makeOperation(resultNumber, currentNumber) ?? 0
+                resultNumber  = currentBasicOperation?.makeOperation(resultNumber, currentNumber) ?? Constant.defaultValue
                 view?.setResultLabel(with: "\(resultNumber)")
-                isOnTheFirstCalculation = false
-                previousNumber = currentNumber
-                currentNumber = 0
-                input = ""
-                currentBasicOperation = BasicOperations.currentOperation(operation)
+                updateCalculation(isFirstCalculation: false, operation: operation)
             }
         }
     }
@@ -122,15 +120,15 @@ extension HomePresenter: HomePresenterInterface {
         
         guard currentExtraOpertaion != nil else { return }
         
-        if currentNumber > 0 {
-            let result = currentExtraOpertaion?.getValue(currentNumber) ?? 0
+        if currentNumber > Constant.defaultValue {
+            let result = currentExtraOpertaion?.getValue(currentNumber) ?? Constant.defaultValue
             view?.setResultLabel(with: "\(result)")
             resetCalculation()
             return
         }
         
-        if resultNumber > 0 {
-            let result = currentExtraOpertaion?.getValue(resultNumber) ?? 0
+        if resultNumber > Constant.defaultValue {
+            let result = currentExtraOpertaion?.getValue(resultNumber) ?? Constant.defaultValue
             view?.setResultLabel(with: "\(result)")
             resetCalculation()
             return
@@ -145,7 +143,7 @@ extension HomePresenter: HomePresenterInterface {
     func equalButtonTapped() {
         guard let currentOperation = currentBasicOperation else { return }
         let firstNumber = isOnTheFirstCalculation ? previousNumber : resultNumber
-        let result = currentOperation.makeOperation(firstNumber, currentNumber) ?? 0
+        let result = currentOperation.makeOperation(firstNumber, currentNumber) ?? Constant.defaultValue
         view?.setResultLabel(with: "\(result)")
     }
     
@@ -154,13 +152,13 @@ extension HomePresenter: HomePresenterInterface {
         // The base API doesn't support the current date rate on the free version, which is why twoDaysBefore's value was created.
         let twoDaysBefore = Date().twoDaysBefore.toString()
         
-        if currentNumber > 0 {
+        if currentNumber > Constant.defaultValue {
             view?.showHUD()
             interactor.getConversionResult(amount: Float(currentNumber), date: twoDaysBefore)
             return
         }
         
-        if resultNumber > 0 {
+        if resultNumber > Constant.defaultValue {
             view?.showHUD()
             interactor.getConversionResult(amount: Float(resultNumber), date: twoDaysBefore)
             return
@@ -178,15 +176,21 @@ extension HomePresenter: HomePresenterInterface {
 
 private extension HomePresenter {
     func resetCalculation() {
-        input = "0"
-        currentNumber = 0
+        input = Constant.zero
+        currentNumber = Constant.defaultValue
         currentBasicOperation = nil
-        previousNumber = 0
-        resultNumber = 0
+        previousNumber = Constant.defaultValue
+        resultNumber = Constant.defaultValue
         isOnTheFirstCalculation = false
     }
     
-
+    func updateCalculation(isFirstCalculation: Bool, operation: String) {
+        isOnTheFirstCalculation = isFirstCalculation
+        previousNumber = currentNumber
+        currentNumber = Constant.defaultValue
+        input = Constant.emptyString
+        currentBasicOperation = BasicOperations.currentOperation(operation)
+    }
 }
 
 // MARK: - HomeInteractorOutput
