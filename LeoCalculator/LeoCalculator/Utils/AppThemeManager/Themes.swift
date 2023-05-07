@@ -8,6 +8,8 @@
 
 import UIKit
 
+// MARK: - OriginalTheme
+
 struct OriginalTheme: ThemeProtocol {
     var backgroundColor: UIColor = .black
     var resultTextColor: UIColor = .white
@@ -22,6 +24,8 @@ struct OriginalTheme: ThemeProtocol {
     var equalTextColor: UIColor = .white
     var equalBackgroundColor: UIColor = .appDarkGray()
 }
+
+// MARK: - RedTheme
 
 struct RedTheme: ThemeProtocol {
     var backgroundColor: UIColor = .black

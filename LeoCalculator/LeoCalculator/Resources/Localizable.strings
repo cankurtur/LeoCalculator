@@ -6,7 +6,29 @@
   
 */
 
-"general.hudCalculating" = "Calculating";
+// General
+
+"general.zero" = "0";
+"general.point" = ".";
+"general.empty" = "";
+
+// Home
+
+"home.clear" = "C";
+"home.sin" = "sin";
+"home.cos" = "cos";
+"home.bitcoinToDollar" = "฿ to $";
+"home.multiply" = "x";
+"home.divide" = "/";
+"home.add" = "+";
+"home.subtract" = "-";
+"home.equal" = "=";
+
+// AppPopup
 
 "appPopupView.error" = "Error";
 "appPopupView.ok" = "OK";
+
+// HUD
+
+"hud.calculating" = "Calculating";

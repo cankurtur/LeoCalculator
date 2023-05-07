@@ -12,7 +12,7 @@ import UIKit
 private enum Constant {
     enum ResultLabel {
         static let font: UIFont = .bold50
-        static let initialText: String = "0"
+        static let initialText: String = Localizable.generalZero
     }
     
     enum NumpadButtons {
@@ -21,11 +21,19 @@ private enum Constant {
     }
     
     enum BasicOperationButtons {
+        static let addTitle: String = Localizable.homeAdd
+        static let subtractTitle: String = Localizable.homeSubtract
+        static let multiplyTitle: String = Localizable.homeMultiply
+        static let divideTitle: String = Localizable.homeDivide
+
         static let titleFont: UIFont = .bold20
         static let cornerRadius: CGFloat = 8
     }
     
     enum ExtraOperationButtons {
+        static let sinTitle: String = Localizable.homeSin
+        static let cosTitle: String = Localizable.homeCos
+        static let bitcoinToDollarTitle: String = Localizable.homeBitcoinToDollar
         static let titleFont: UIFont = .bold20
         static let cornerRadius: CGFloat = 8
     }
@@ -33,9 +41,11 @@ private enum Constant {
     enum ClearButton {
         static let titleFont: UIFont = .bold20
         static let cornerRadius: CGFloat = 22
+        static let title: String = Localizable.homeClear
     }
     
     enum EqualButton {
+        static let title: String = Localizable.homeEqual
         static let titleFont: UIFont = .bold20
         static let cornerRadius: CGFloat = 8
     }
@@ -167,38 +177,47 @@ private extension HomeViewController {
             button.addTarget(self, action: #selector(numpadButtonTapped(_:)), for: .touchUpInside)
         }
         
+        addButton.setTitle(Constant.BasicOperationButtons.addTitle, for: .normal)
         addButton.titleLabel?.font = Constant.BasicOperationButtons.titleFont
         addButton.layer.cornerRadius = Constant.BasicOperationButtons.cornerRadius
         addButton.addTarget(self, action: #selector(basicOperationsTapped(_:)), for: .touchUpInside)
         
+        subtractButton.setTitle(Constant.BasicOperationButtons.subtractTitle, for: .normal)
         subtractButton.titleLabel?.font = Constant.BasicOperationButtons.titleFont
         subtractButton.layer.cornerRadius = Constant.BasicOperationButtons.cornerRadius
         subtractButton.addTarget(self, action: #selector(basicOperationsTapped(_:)), for: .touchUpInside)
 
+        multiplyButton.setTitle(Constant.BasicOperationButtons.multiplyTitle, for: .normal)
         multiplyButton.titleLabel?.font = Constant.BasicOperationButtons.titleFont
         multiplyButton.layer.cornerRadius = Constant.BasicOperationButtons.cornerRadius
         multiplyButton.addTarget(self, action: #selector(basicOperationsTapped(_:)), for: .touchUpInside)
 
+        divideButton.setTitle(Constant.BasicOperationButtons.divideTitle, for: .normal)
         divideButton.titleLabel?.font = Constant.BasicOperationButtons.titleFont
         divideButton.layer.cornerRadius = Constant.BasicOperationButtons.cornerRadius
         divideButton.addTarget(self, action: #selector(basicOperationsTapped(_:)), for: .touchUpInside)
 
+        sinButton.setTitle(Constant.ExtraOperationButtons.sinTitle, for: .normal)
         sinButton.titleLabel?.font = Constant.ExtraOperationButtons.titleFont
         sinButton.layer.cornerRadius = Constant.ExtraOperationButtons.cornerRadius
         sinButton.addTarget(self, action: #selector(extraOperationsTapped(_:)), for: .touchUpInside)
 
+        cosButton.setTitle(Constant.ExtraOperationButtons.cosTitle, for: .normal)
         cosButton.titleLabel?.font = Constant.ExtraOperationButtons.titleFont
         cosButton.layer.cornerRadius = Constant.ExtraOperationButtons.cornerRadius
         cosButton.addTarget(self, action: #selector(extraOperationsTapped(_:)), for: .touchUpInside)
 
+        bitcoinButton.setTitle(Constant.ExtraOperationButtons.bitcoinToDollarTitle, for: .normal)
         bitcoinButton.titleLabel?.font = Constant.ExtraOperationButtons.titleFont
         bitcoinButton.layer.cornerRadius = Constant.ExtraOperationButtons.cornerRadius
         bitcoinButton.addTarget(self, action: #selector(bitcoinButtonTapped), for: .touchUpInside)
 
+        clearButton.setTitle(Constant.ClearButton.title, for: .normal)
         clearButton.titleLabel?.font = Constant.ClearButton.titleFont
         clearButton.layer.cornerRadius = Constant.ClearButton.cornerRadius
         clearButton.addTarget(self, action: #selector(clearButtonTapped), for: .touchUpInside)
         
+        equalButton.setTitle(Constant.EqualButton.title, for: .normal)
         equalButton.titleLabel?.font = Constant.EqualButton.titleFont
         equalButton.layer.cornerRadius = Constant.EqualButton.cornerRadius
         equalButton.addTarget(self, action: #selector(equalButtonTapped), for: .touchUpInside)
