@@ -10,54 +10,41 @@ import UIKit
 // MARK: - Constant
 
 private enum Constant {
-    static let backgroundColor: UIColor = .clear
-    
     enum ResultLabel {
         static let font: UIFont = .bold50
-        static let textColor: UIColor = .white
         static let initialText: String = "0"
     }
     
     enum NumpadButtons {
         static let titleFont: UIFont = .bold20
-        static let titleColor: UIColor = .white
-        static let backgroundColor: UIColor = .gray
         static let cornerRadius: CGFloat = 8
     }
     
     enum BasicOperationButtons {
         static let titleFont: UIFont = .bold20
-        static let titleColor: UIColor = .black
-        static let backgroundColor: UIColor = .systemOrange
         static let cornerRadius: CGFloat = 8
     }
     
     enum ExtraOperationButtons {
         static let titleFont: UIFont = .bold20
-        static let titleColor: UIColor = .systemOrange
-        static let backgroundColor: UIColor = .darkGray
         static let cornerRadius: CGFloat = 8
     }
     
     enum ClearButton {
         static let titleFont: UIFont = .bold20
-        static let titleColor: UIColor = .black
-        static let backgroundColor: UIColor = .darkGray
         static let cornerRadius: CGFloat = 22
     }
     
     enum EqualButton {
         static let titleFont: UIFont = .bold20
-        static let titleColor: UIColor = .black
-        static let backgroundColor: UIColor = .darkGray
         static let cornerRadius: CGFloat = 8
     }
     
     enum ThemeSwitch {
-        static let offThumbTintColor: UIColor = .systemOrange
-        static let backgroundColor: UIColor = .darkGray
-        static let onTintColor: UIColor = .darkGray
-        static let onThumbTintColor: UIColor = .systemRed
+        static let offThumbTintColor: UIColor = .appOrange()
+        static let backgroundColor: UIColor = .appDarkGray()
+        static let onTintColor: UIColor = .appDarkGray()
+        static let onThumbTintColor: UIColor = .appRed()
     }
 }
 

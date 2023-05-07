@@ -10,42 +10,30 @@ import UIKit
 
 struct OriginalTheme: ThemeProtocol {
     var backgroundColor: UIColor = .black
-    
     var resultTextColor: UIColor = .white
-    
     var numpadTextColor: UIColor = .white
-    var numpadBackgroundColor: UIColor  = .gray
-    
-    var basicOperationTextColor: UIColor = .black
-    var basicOperationBackgroundColor: UIColor = .systemOrange
-    
-    var extraOperationTextColor: UIColor = .systemOrange
-    var extraOperationBackgroundColor: UIColor = .darkGray
-    
+    var numpadBackgroundColor: UIColor  = .appLightGray()
+    var basicOperationTextColor: UIColor = .white
+    var basicOperationBackgroundColor: UIColor = .appOrange()
+    var extraOperationTextColor: UIColor = .appOrange()
+    var extraOperationBackgroundColor: UIColor = .appDarkGray()
     var clearTextColor: UIColor = .black
-    var clearBackgroundColor: UIColor = .darkGray
-    
-    var equalTextColor: UIColor = .black
-    var equalBackgroundColor: UIColor = .darkGray
+    var clearBackgroundColor: UIColor = .appDarkGray()
+    var equalTextColor: UIColor = .white
+    var equalBackgroundColor: UIColor = .appDarkGray()
 }
 
 struct RedTheme: ThemeProtocol {
     var backgroundColor: UIColor = .black
-    
-    var resultTextColor: UIColor = .systemRed
-    
-    var numpadTextColor: UIColor = .systemRed
-    var numpadBackgroundColor: UIColor  = .gray
-    
+    var resultTextColor: UIColor = .white
+    var numpadTextColor: UIColor = .white
+    var numpadBackgroundColor: UIColor  = .appLightGray()
     var basicOperationTextColor: UIColor = .white
-    var basicOperationBackgroundColor: UIColor = .systemRed
-    
-    var extraOperationTextColor: UIColor = .systemRed
-    var extraOperationBackgroundColor: UIColor = .darkGray
-    
+    var basicOperationBackgroundColor: UIColor = .appRed()
+    var extraOperationTextColor: UIColor = .appRed()
+    var extraOperationBackgroundColor: UIColor = .appDarkGray()
     var clearTextColor: UIColor = .black
-    var clearBackgroundColor: UIColor = .darkGray
-    
-    var equalTextColor: UIColor = .black
-    var equalBackgroundColor: UIColor = .darkGray
+    var clearBackgroundColor: UIColor = .appDarkGray()
+    var equalTextColor: UIColor = .white
+    var equalBackgroundColor: UIColor = .appDarkGray()
 }
