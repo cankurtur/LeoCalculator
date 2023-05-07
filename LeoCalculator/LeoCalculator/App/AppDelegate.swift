@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func setupRCManager() {
-        CompositionRoot.shared.rcManager.fetchRCValues { _ in }
+        CompositionRoot.shared.rcManager.fetchRCValues { success in
+            NotificationCenter.default.post(name: .shouldUpdateHomeButtons, object: success)
+        }
     }
 }

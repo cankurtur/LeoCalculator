@@ -26,14 +26,8 @@ final class CompositionRoot {
         return ThemeManager.shared
     }()
     
-    lazy var hiddenModel: HomeHiddenModel = {
-        return HomeHiddenModel(addIsHidden: self.rcManager.bool(forKey: .isAddButtonEnabled),
-                               subtractIsHidden: self.rcManager.bool(forKey: .isSubtractButtonEnabled),
-                               multiplyIsHidden: self.rcManager.bool(forKey: .isMultiplyButtonEnabled),
-                               divideIsHidden: self.rcManager.bool(forKey: .isDivideButtonEnabled),
-                               sinIsHidden: self.rcManager.bool(forKey: .isSinButtonEnabled),
-                               cosIsHidden: self.rcManager.bool(forKey: .isCosButtonEnabled),
-                               bitcoinIsHidden: self.rcManager.bool(forKey: .isBitcoinButtonEnabled))
+    lazy var notificationCenter: NotificationCenterProtocol = {
+        return NotificationCenter.default
     }()
     
     private init() { }

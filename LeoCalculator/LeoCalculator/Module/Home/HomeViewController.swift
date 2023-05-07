@@ -66,7 +66,7 @@ private enum Constant {
 protocol HomeViewInterface: ViewInterface {
     func prepareUI()
     func setResultLabel(with result: String)
-    func prepareHiddenity(with hiddenModel: HomeHiddenModel)
+    func updateHiddenity(with hiddenModel: HomeHiddenModel)
     func updateUI(with uiModel: HomeUIModel)
 }
 
@@ -114,7 +114,7 @@ extension HomeViewController: HomeViewInterface {
         resultLabel.text = result
     }
     
-    func prepareHiddenity(with hiddenModel: HomeHiddenModel) {
+    func updateHiddenity(with hiddenModel: HomeHiddenModel) {
         addButton.isHidden = !hiddenModel.addIsHidden
         subtractButton.isHidden = !hiddenModel.subtractIsHidden
         multiplyButton.isHidden = !hiddenModel.multiplyIsHidden
