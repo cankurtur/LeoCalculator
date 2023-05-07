@@ -46,18 +46,18 @@ final class RCManager: RCManagerInterface {
             guard let strongSelf = self else { return }
             if let error = error {
                 print("Uh-oh. Got an error fetching remote values \(error)")
-                completion(true)
+                completion(false)
                 return
             }
             print("Retrieved values from the firebase remote config!")
             strongSelf.remoteConfig.activate { (/*success*/ _, error) in
                 if let error = error {
                     print("Values could not be activated: \(error.localizedDescription)")
-                    completion(true)
+                    completion(false)
                     return
                 }
                 print("Values are successfully activated")
-                completion(false)
+                completion(true)
             }
         }
     }
