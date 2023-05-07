@@ -51,6 +51,7 @@
 		253E6EEE2A04822A003714A6 /* HUDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E6EED2A04822A003714A6 /* HUDManager.swift */; };
 		253E6EF02A04832B003714A6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 253E6EEF2A04832B003714A6 /* Localizable.strings */; };
 		253E6EF22A048362003714A6 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E6EF12A048362003714A6 /* Localizable.swift */; };
+		25BB7A742A082D03000FEF13 /* NSNotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BB7A732A082D03000FEF13 /* NSNotificationExtension.swift */; };
 		25D792AC2A0263A9000CC7FA /* LeoCalculation in Frameworks */ = {isa = PBXBuildFile; productRef = 25D792AB2A0263A9000CC7FA /* LeoCalculation */; };
 		25D792B22A02EEF4000CC7FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25D792B12A02EEF4000CC7FA /* GoogleService-Info.plist */; };
 		25D792B52A02EF3A000CC7FA /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 25D792B42A02EF3A000CC7FA /* FirebaseAnalytics */; };
@@ -132,6 +133,7 @@
 		253E6EED2A04822A003714A6 /* HUDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDManager.swift; sourceTree = "<group>"; };
 		253E6EEF2A04832B003714A6 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		253E6EF12A048362003714A6 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		25BB7A732A082D03000FEF13 /* NSNotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationExtension.swift; sourceTree = "<group>"; };
 		25D792B12A02EEF4000CC7FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		25D792C32A02EF55000CC7FA /* RCManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCManager.swift; sourceTree = "<group>"; };
 		25D792C52A02F34B000CC7FA /* CompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionRoot.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				2525C2312A003576002706F0 /* UIFontExtension.swift */,
 				253E6EE82A0478A2003714A6 /* DateExtension.swift */,
 				25132E512A05CD9A00A8C155 /* UIViewExtension.swift */,
+				25BB7A732A082D03000FEF13 /* NSNotificationExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 				25132E582A05CFFC00A8C155 /* DefaultAppPopupState.swift in Sources */,
 				2525C2322A003576002706F0 /* UIFontExtension.swift in Sources */,
 				2525C2182A000E92002706F0 /* NSObjectExtension.swift in Sources */,
+				25BB7A742A082D03000FEF13 /* NSNotificationExtension.swift in Sources */,
 				253E6EE92A0478A2003714A6 /* DateExtension.swift in Sources */,
 				2525C2272A0014CF002706F0 /* HomeInteractor.swift in Sources */,
 				25132E522A05CD9A00A8C155 /* UIViewExtension.swift in Sources */,

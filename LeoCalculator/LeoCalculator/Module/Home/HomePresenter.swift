@@ -46,6 +46,10 @@ final class HomePresenter {
         self.view = view
         self.compositionRoot = compositionRoot
     }
+    
+    deinit {
+        compositionRoot.notificationCenter.removeWith(self)
+    }
 }
 
 // MARK: - HomePresenterInterface
@@ -53,8 +57,14 @@ final class HomePresenter {
 extension HomePresenter: HomePresenterInterface {
     func viewDidLoad() {
         view?.prepareUI()
-        view?.prepareHiddenity(with: compositionRoot.hiddenModel)
         view?.updateUI(with: compositionRoot.themeManager.getHomeUIModel())
+        
+        compositionRoot.notificationCenter.add(
+            observer: self,
+            selector: #selector(shouldUpdateHomeButtons(_:)),
+            name: .shouldUpdateHomeButtons,
+            object: nil
+        )
     }
     
     func numpadButtonTapped(title: String?) {
@@ -175,6 +185,8 @@ private extension HomePresenter {
         resultNumber = 0
         isOnTheFirstCalculation = false
     }
+    
+
 }
 
 // MARK: - HomeInteractorOutput
@@ -192,6 +204,29 @@ extension HomePresenter: HomeInteractorOutput {
             resetCalculation()
         case .failure(let error):
             view?.showPopup(error: error, buttonAction: nil)
+        }
+    }
+}
+
+// MARK: - Actions
+
+@objc
+private extension HomePresenter {
+    func shouldUpdateHomeButtons(_ notification: Notification) {
+        guard let succeess = notification.object as? Bool, succeess else { return }
+        
+        let model = HomeHiddenModel(addIsHidden: compositionRoot.rcManager.bool(forKey: .isAddButtonEnabled),
+                                    subtractIsHidden: compositionRoot.rcManager.bool(forKey: .isSubtractButtonEnabled),
+                                    multiplyIsHidden: compositionRoot.rcManager.bool(forKey: .isMultiplyButtonEnabled),
+                                    divideIsHidden: compositionRoot.rcManager.bool(forKey: .isDivideButtonEnabled),
+                                    sinIsHidden: compositionRoot.rcManager.bool(forKey: .isSinButtonEnabled),
+                                    cosIsHidden: compositionRoot.rcManager.bool(forKey: .isCosButtonEnabled),
+                                    bitcoinIsHidden: compositionRoot.rcManager.bool(forKey: .isBitcoinButtonEnabled))
+        
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            
+            self.view?.updateHiddenity(with: model)
         }
     }
 }
