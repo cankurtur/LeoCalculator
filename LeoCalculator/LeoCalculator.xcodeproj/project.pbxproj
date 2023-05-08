@@ -20,9 +20,6 @@
 		2525C1E32A000C07002706F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C1E22A000C07002706F0 /* SceneDelegate.swift */; };
 		2525C1EA2A000C08002706F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2525C1E92A000C08002706F0 /* Assets.xcassets */; };
 		2525C1ED2A000C08002706F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2525C1EB2A000C08002706F0 /* LaunchScreen.storyboard */; };
-		2525C1F82A000C08002706F0 /* LeoCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C1F72A000C08002706F0 /* LeoCalculatorTests.swift */; };
-		2525C2022A000C08002706F0 /* LeoCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C2012A000C08002706F0 /* LeoCalculatorUITests.swift */; };
-		2525C2042A000C08002706F0 /* LeoCalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C2032A000C08002706F0 /* LeoCalculatorUITestsLaunchTests.swift */; };
 		2525C2152A000E70002706F0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C2142A000E70002706F0 /* BaseViewController.swift */; };
 		2525C2182A000E92002706F0 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C2172A000E92002706F0 /* NSObjectExtension.swift */; };
 		2525C21A2A000F03002706F0 /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C2192A000F03002706F0 /* ViewInterface.swift */; };
@@ -37,6 +34,14 @@
 		2525C22E2A0024F0002706F0 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C22D2A0024F0002706F0 /* Storyboarded.swift */; };
 		2525C2302A002504002706F0 /* StoryboardNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C22F2A002504002706F0 /* StoryboardNames.swift */; };
 		2525C2322A003576002706F0 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525C2312A003576002706F0 /* UIFontExtension.swift */; };
+		252FA85B2A098F1C00981430 /* MockNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252FA85A2A098F1C00981430 /* MockNotificationCenter.swift */; };
+		252FA85D2A098FCC00981430 /* MockCompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252FA85C2A098FCC00981430 /* MockCompositionRoot.swift */; };
+		252FA85F2A09913100981430 /* MockThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252FA85E2A09913100981430 /* MockThemeManager.swift */; };
+		252FA8612A0991A300981430 /* MockRCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252FA8602A0991A300981430 /* MockRCManager.swift */; };
+		252FA8632A09923500981430 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252FA8622A09923500981430 /* MockNetworkManager.swift */; };
+		252FA8652A09961F00981430 /* RCManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252FA8642A09961F00981430 /* RCManagerTests.swift */; };
+		252FA8692A09990600981430 /* NotificationCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252FA8682A09990600981430 /* NotificationCenterTests.swift */; };
+		252FA86C2A099A8E00981430 /* ThemeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252FA86B2A099A8E00981430 /* ThemeManagerTests.swift */; };
 		253E6ED32A04689B003714A6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E6ED22A04689B003714A6 /* Endpoint.swift */; };
 		253E6ED52A046962003714A6 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 253E6ED42A046962003714A6 /* Config.plist */; };
 		253E6ED72A0469E6003714A6 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E6ED62A0469E6003714A6 /* Config.swift */; };
@@ -51,6 +56,21 @@
 		253E6EEE2A04822A003714A6 /* HUDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E6EED2A04822A003714A6 /* HUDManager.swift */; };
 		253E6EF02A04832B003714A6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 253E6EEF2A04832B003714A6 /* Localizable.strings */; };
 		253E6EF22A048362003714A6 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E6EF12A048362003714A6 /* Localizable.swift */; };
+		255862DD2A09738800617433 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 255862DC2A09738800617433 /* FirebaseAnalyticsSwift */; };
+		255862DF2A09739100617433 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 255862DE2A09739100617433 /* FirebaseRemoteConfigSwift */; };
+		255862E12A09739800617433 /* MBProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 255862E02A09739800617433 /* MBProgressHUD */; };
+		255862E32A0973A000617433 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 255862E22A0973A000617433 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		255862E52A0973A300617433 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 255862E42A0973A300617433 /* FirebaseAnalytics */; };
+		255862E72A0973AC00617433 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 255862E62A0973AC00617433 /* FirebaseRemoteConfig */; };
+		255862E92A0973B000617433 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 255862E82A0973B000617433 /* FirebaseCrashlytics */; };
+		255862EB2A0973B900617433 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 255862EA2A0973B900617433 /* SwiftMessages */; };
+		255862ED2A0973BD00617433 /* LeoNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 255862EC2A0973BD00617433 /* LeoNetworking */; };
+		255862EF2A0973C700617433 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 255862EE2A0973C700617433 /* FirebaseAnalyticsOnDeviceConversion */; };
+		255862F12A0973CA00617433 /* LeoCalculation in Frameworks */ = {isa = PBXBuildFile; productRef = 255862F02A0973CA00617433 /* LeoCalculation */; };
+		255862F52A0973F300617433 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255862F42A0973F300617433 /* HomeViewController.swift */; };
+		255862F72A09745E00617433 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255862F62A09745E00617433 /* HomeInteractor.swift */; };
+		255862F92A09749000617433 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255862F82A09749000617433 /* HomeRouter.swift */; };
+		255862FB2A0974B500617433 /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255862FA2A0974B500617433 /* HomePresenterTests.swift */; };
 		25BB7A742A082D03000FEF13 /* NSNotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BB7A732A082D03000FEF13 /* NSNotificationExtension.swift */; };
 		25BB7A832A0837ED000FEF13 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25BB7A822A0837ED000FEF13 /* Colors.xcassets */; };
 		25BB7A852A0838E6000FEF13 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BB7A842A0838E6000FEF13 /* UIColorExtension.swift */; };
@@ -78,13 +98,6 @@
 			remoteGlobalIDString = 2525C1DC2A000C07002706F0;
 			remoteInfo = LeoCalculator;
 		};
-		2525C1FE2A000C08002706F0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2525C1D52A000C07002706F0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2525C1DC2A000C07002706F0;
-			remoteInfo = LeoCalculator;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -102,10 +115,6 @@
 		2525C1EC2A000C08002706F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2525C1EE2A000C08002706F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2525C1F32A000C08002706F0 /* LeoCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeoCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2525C1F72A000C08002706F0 /* LeoCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeoCalculatorTests.swift; sourceTree = "<group>"; };
-		2525C1FD2A000C08002706F0 /* LeoCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeoCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2525C2012A000C08002706F0 /* LeoCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeoCalculatorUITests.swift; sourceTree = "<group>"; };
-		2525C2032A000C08002706F0 /* LeoCalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeoCalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2525C2142A000E70002706F0 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		2525C2172A000E92002706F0 /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
 		2525C2192A000F03002706F0 /* ViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
@@ -120,6 +129,14 @@
 		2525C22D2A0024F0002706F0 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		2525C22F2A002504002706F0 /* StoryboardNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardNames.swift; sourceTree = "<group>"; };
 		2525C2312A003576002706F0 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
+		252FA85A2A098F1C00981430 /* MockNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNotificationCenter.swift; sourceTree = "<group>"; };
+		252FA85C2A098FCC00981430 /* MockCompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCompositionRoot.swift; sourceTree = "<group>"; };
+		252FA85E2A09913100981430 /* MockThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockThemeManager.swift; sourceTree = "<group>"; };
+		252FA8602A0991A300981430 /* MockRCManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRCManager.swift; sourceTree = "<group>"; };
+		252FA8622A09923500981430 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
+		252FA8642A09961F00981430 /* RCManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCManagerTests.swift; sourceTree = "<group>"; };
+		252FA8682A09990600981430 /* NotificationCenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterTests.swift; sourceTree = "<group>"; };
+		252FA86B2A099A8E00981430 /* ThemeManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManagerTests.swift; sourceTree = "<group>"; };
 		253E6ED22A04689B003714A6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		253E6ED42A046962003714A6 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		253E6ED62A0469E6003714A6 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -133,6 +150,11 @@
 		253E6EED2A04822A003714A6 /* HUDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDManager.swift; sourceTree = "<group>"; };
 		253E6EEF2A04832B003714A6 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		253E6EF12A048362003714A6 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		255862F32A0973F300617433 /* LeoCalculatorTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LeoCalculatorTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		255862F42A0973F300617433 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		255862F62A09745E00617433 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		255862F82A09749000617433 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		255862FA2A0974B500617433 /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
 		25BB7A732A082D03000FEF13 /* NSNotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationExtension.swift; sourceTree = "<group>"; };
 		25BB7A822A0837ED000FEF13 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		25BB7A842A0838E6000FEF13 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -167,13 +189,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2525C1FA2A000C08002706F0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				255862E12A09739800617433 /* MBProgressHUD in Frameworks */,
+				255862F12A0973CA00617433 /* LeoCalculation in Frameworks */,
+				255862DD2A09738800617433 /* FirebaseAnalyticsSwift in Frameworks */,
+				255862EB2A0973B900617433 /* SwiftMessages in Frameworks */,
+				255862DF2A09739100617433 /* FirebaseRemoteConfigSwift in Frameworks */,
+				255862E92A0973B000617433 /* FirebaseCrashlytics in Frameworks */,
+				255862ED2A0973BD00617433 /* LeoNetworking in Frameworks */,
+				255862E72A0973AC00617433 /* FirebaseRemoteConfig in Frameworks */,
+				255862EF2A0973C700617433 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				255862E52A0973A300617433 /* FirebaseAnalytics in Frameworks */,
+				255862E32A0973A000617433 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,8 +230,8 @@
 			children = (
 				2525C1DF2A000C07002706F0 /* LeoCalculator */,
 				2525C1F62A000C08002706F0 /* LeoCalculatorTests */,
-				2525C2002A000C08002706F0 /* LeoCalculatorUITests */,
 				2525C1DE2A000C07002706F0 /* Products */,
+				255862DB2A09738800617433 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -214,7 +240,6 @@
 			children = (
 				2525C1DD2A000C07002706F0 /* LeoCalculator.app */,
 				2525C1F32A000C08002706F0 /* LeoCalculatorTests.xctest */,
-				2525C1FD2A000C08002706F0 /* LeoCalculatorUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -240,18 +265,14 @@
 		2525C1F62A000C08002706F0 /* LeoCalculatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				2525C1F72A000C08002706F0 /* LeoCalculatorTests.swift */,
+				252FA86A2A099A8000981430 /* ThemeManager */,
+				252FA8662A09987C00981430 /* RCManager */,
+				252FA8672A09989000981430 /* NotificationCenter */,
+				255862F22A0973D800617433 /* Home */,
+				252FA85C2A098FCC00981430 /* MockCompositionRoot.swift */,
+				252FA8622A09923500981430 /* MockNetworkManager.swift */,
 			);
 			path = LeoCalculatorTests;
-			sourceTree = "<group>";
-		};
-		2525C2002A000C08002706F0 /* LeoCalculatorUITests */ = {
-			isa = PBXGroup;
-			children = (
-				2525C2012A000C08002706F0 /* LeoCalculatorUITests.swift */,
-				2525C2032A000C08002706F0 /* LeoCalculatorUITestsLaunchTests.swift */,
-			);
-			path = LeoCalculatorUITests;
 			sourceTree = "<group>";
 		};
 		2525C2102A000D7A002706F0 /* App */ = {
@@ -332,6 +353,33 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		252FA8662A09987C00981430 /* RCManager */ = {
+			isa = PBXGroup;
+			children = (
+				252FA8602A0991A300981430 /* MockRCManager.swift */,
+				252FA8642A09961F00981430 /* RCManagerTests.swift */,
+			);
+			path = RCManager;
+			sourceTree = "<group>";
+		};
+		252FA8672A09989000981430 /* NotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				252FA85A2A098F1C00981430 /* MockNotificationCenter.swift */,
+				252FA8682A09990600981430 /* NotificationCenterTests.swift */,
+			);
+			path = NotificationCenter;
+			sourceTree = "<group>";
+		};
+		252FA86A2A099A8000981430 /* ThemeManager */ = {
+			isa = PBXGroup;
+			children = (
+				252FA85E2A09913100981430 /* MockThemeManager.swift */,
+				252FA86B2A099A8E00981430 /* ThemeManagerTests.swift */,
+			);
+			path = ThemeManager;
+			sourceTree = "<group>";
+		};
 		253E6ED12A04688B003714A6 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +407,25 @@
 				253E6EE62A047641003714A6 /* Currencies.swift */,
 			);
 			path = ConvertingCurrencies;
+			sourceTree = "<group>";
+		};
+		255862DB2A09738800617433 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		255862F22A0973D800617433 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				255862F32A0973F300617433 /* LeoCalculatorTests-Bridging-Header.h */,
+				255862F42A0973F300617433 /* HomeViewController.swift */,
+				255862F62A09745E00617433 /* HomeInteractor.swift */,
+				255862F82A09749000617433 /* HomeRouter.swift */,
+				255862FA2A0974B500617433 /* HomePresenterTests.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		25D792C22A02EF49000CC7FA /* Utils */ = {
@@ -440,27 +507,22 @@
 				2525C1F52A000C08002706F0 /* PBXTargetDependency */,
 			);
 			name = LeoCalculatorTests;
+			packageProductDependencies = (
+				255862DC2A09738800617433 /* FirebaseAnalyticsSwift */,
+				255862DE2A09739100617433 /* FirebaseRemoteConfigSwift */,
+				255862E02A09739800617433 /* MBProgressHUD */,
+				255862E22A0973A000617433 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				255862E42A0973A300617433 /* FirebaseAnalytics */,
+				255862E62A0973AC00617433 /* FirebaseRemoteConfig */,
+				255862E82A0973B000617433 /* FirebaseCrashlytics */,
+				255862EA2A0973B900617433 /* SwiftMessages */,
+				255862EC2A0973BD00617433 /* LeoNetworking */,
+				255862EE2A0973C700617433 /* FirebaseAnalyticsOnDeviceConversion */,
+				255862F02A0973CA00617433 /* LeoCalculation */,
+			);
 			productName = LeoCalculatorTests;
 			productReference = 2525C1F32A000C08002706F0 /* LeoCalculatorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		2525C1FC2A000C08002706F0 /* LeoCalculatorUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2525C20D2A000C08002706F0 /* Build configuration list for PBXNativeTarget "LeoCalculatorUITests" */;
-			buildPhases = (
-				2525C1F92A000C08002706F0 /* Sources */,
-				2525C1FA2A000C08002706F0 /* Frameworks */,
-				2525C1FB2A000C08002706F0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2525C1FF2A000C08002706F0 /* PBXTargetDependency */,
-			);
-			name = LeoCalculatorUITests;
-			productName = LeoCalculatorUITests;
-			productReference = 2525C1FD2A000C08002706F0 /* LeoCalculatorUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -477,10 +539,7 @@
 					};
 					2525C1F22A000C08002706F0 = {
 						CreatedOnToolsVersion = 14.3;
-						TestTargetID = 2525C1DC2A000C07002706F0;
-					};
-					2525C1FC2A000C08002706F0 = {
-						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 						TestTargetID = 2525C1DC2A000C07002706F0;
 					};
 				};
@@ -507,7 +566,6 @@
 			targets = (
 				2525C1DC2A000C07002706F0 /* LeoCalculator */,
 				2525C1F22A000C08002706F0 /* LeoCalculatorTests */,
-				2525C1FC2A000C08002706F0 /* LeoCalculatorUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -529,13 +587,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2525C1F12A000C08002706F0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2525C1FB2A000C08002706F0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -618,16 +669,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2525C1F82A000C08002706F0 /* LeoCalculatorTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2525C1F92A000C08002706F0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2525C2022A000C08002706F0 /* LeoCalculatorUITests.swift in Sources */,
-				2525C2042A000C08002706F0 /* LeoCalculatorUITestsLaunchTests.swift in Sources */,
+				252FA8612A0991A300981430 /* MockRCManager.swift in Sources */,
+				255862F52A0973F300617433 /* HomeViewController.swift in Sources */,
+				255862F92A09749000617433 /* HomeRouter.swift in Sources */,
+				252FA8632A09923500981430 /* MockNetworkManager.swift in Sources */,
+				255862F72A09745E00617433 /* HomeInteractor.swift in Sources */,
+				252FA85F2A09913100981430 /* MockThemeManager.swift in Sources */,
+				252FA85B2A098F1C00981430 /* MockNotificationCenter.swift in Sources */,
+				252FA85D2A098FCC00981430 /* MockCompositionRoot.swift in Sources */,
+				252FA8652A09961F00981430 /* RCManagerTests.swift in Sources */,
+				255862FB2A0974B500617433 /* HomePresenterTests.swift in Sources */,
+				252FA8692A09990600981430 /* NotificationCenterTests.swift in Sources */,
+				252FA86C2A099A8E00981430 /* ThemeManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,11 +691,6 @@
 			isa = PBXTargetDependency;
 			target = 2525C1DC2A000C07002706F0 /* LeoCalculator */;
 			targetProxy = 2525C1F42A000C08002706F0 /* PBXContainerItemProxy */;
-		};
-		2525C1FF2A000C08002706F0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2525C1DC2A000C07002706F0 /* LeoCalculator */;
-			targetProxy = 2525C1FE2A000C08002706F0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -834,15 +882,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WZ2D3R22K6;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cankurtur.LeoCalculatorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "LeoCalculatorTests/Home/LeoCalculatorTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeoCalculator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LeoCalculator";
@@ -854,54 +905,20 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WZ2D3R22K6;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cankurtur.LeoCalculatorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "LeoCalculatorTests/Home/LeoCalculatorTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeoCalculator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LeoCalculator";
-			};
-			name = Release;
-		};
-		2525C20E2A000C08002706F0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WZ2D3R22K6;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.cankurtur.LeoCalculatorUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LeoCalculator;
-			};
-			name = Debug;
-		};
-		2525C20F2A000C08002706F0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WZ2D3R22K6;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.cankurtur.LeoCalculatorUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LeoCalculator;
 			};
 			name = Release;
 		};
@@ -931,15 +948,6 @@
 			buildConfigurations = (
 				2525C20B2A000C08002706F0 /* Debug */,
 				2525C20C2A000C08002706F0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2525C20D2A000C08002706F0 /* Build configuration list for PBXNativeTarget "LeoCalculatorUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2525C20E2A000C08002706F0 /* Debug */,
-				2525C20F2A000C08002706F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1004,6 +1012,61 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 253E6EEA2A0481E5003714A6 /* XCRemoteSwiftPackageReference "MBProgressHUD" */;
 			productName = MBProgressHUD;
+		};
+		255862DC2A09738800617433 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25D792B32A02EF3A000CC7FA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		255862DE2A09739100617433 /* FirebaseRemoteConfigSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25D792B32A02EF3A000CC7FA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfigSwift;
+		};
+		255862E02A09739800617433 /* MBProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 253E6EEA2A0481E5003714A6 /* XCRemoteSwiftPackageReference "MBProgressHUD" */;
+			productName = MBProgressHUD;
+		};
+		255862E22A0973A000617433 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25D792B32A02EF3A000CC7FA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		255862E42A0973A300617433 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25D792B32A02EF3A000CC7FA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		255862E62A0973AC00617433 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25D792B32A02EF3A000CC7FA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		255862E82A0973B000617433 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25D792B32A02EF3A000CC7FA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		255862EA2A0973B900617433 /* SwiftMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25132E462A05CCFB00A8C155 /* XCRemoteSwiftPackageReference "SwiftMessages" */;
+			productName = SwiftMessages;
+		};
+		255862EC2A0973BD00617433 /* LeoNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25132E3F2A05651E00A8C155 /* XCRemoteSwiftPackageReference "LeoNetworking" */;
+			productName = LeoNetworking;
+		};
+		255862EE2A0973C700617433 /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25D792B32A02EF3A000CC7FA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		255862F02A0973CA00617433 /* LeoCalculation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25D792AA2A0263A9000CC7FA /* XCRemoteSwiftPackageReference "LeoCalculation" */;
+			productName = LeoCalculation;
 		};
 		25D792AB2A0263A9000CC7FA /* LeoCalculation */ = {
 			isa = XCSwiftPackageProductDependency;
