@@ -36,21 +36,21 @@ final class HomePresenter {
     private let router: HomeRouterInterface
     private let interactor: HomeInteractorInterface
     private weak var view: HomeViewInterface?
-    private let compositionRoot: CompositionRoot
+    private let compositionRoot: CompositionRootInterface
     
-    var previousNumber: Double = 0
-    var currentNumber: Double = 0
-    var resultNumber: Double = 0
-    var currentBasicOperation: BasicOperations?
-    var currentExtraOpertaion: ExtraOperations?
-    var isOnTheFirstCalculation: Bool = false
+    private var previousNumber: Double = 0
+    private var currentNumber: Double = 0
+    private var resultNumber: Double = 0
+    private var currentBasicOperation: BasicOperations?
+    private var currentExtraOpertaion: ExtraOperations?
+    private(set) var isOnTheFirstCalculation: Bool = false
     
     var input: String = Constant.emptyString
     
     init(router: HomeRouterInterface,
          interactor: HomeInteractorInterface,
          view: HomeViewInterface?,
-         compositionRoot: CompositionRoot = CompositionRoot.shared) {
+         compositionRoot: CompositionRootInterface = CompositionRoot.shared) {
         self.router = router
         self.interactor = interactor
         self.view = view
@@ -97,7 +97,7 @@ extension HomePresenter: HomePresenterInterface {
         guard let operation = operation else { return }
         
         if isOnTheFirstCalculation {
-            resultNumber  = currentBasicOperation?.makeOperation(previousNumber, currentNumber) ?? Constant.defaultValue
+            resultNumber = currentBasicOperation?.makeOperation(previousNumber, currentNumber) ?? Constant.defaultValue
             view?.setResultLabel(with: "\(resultNumber)")
             updateCalculation(isFirstCalculation: false, operation: operation)
             return
@@ -106,7 +106,7 @@ extension HomePresenter: HomePresenterInterface {
         if resultNumber == Constant.defaultValue {
             updateCalculation(isFirstCalculation: true, operation: operation)
         } else {
-            resultNumber  = currentBasicOperation?.makeOperation(resultNumber, currentNumber) ?? Constant.defaultValue
+            resultNumber = currentBasicOperation?.makeOperation(resultNumber, currentNumber) ?? Constant.defaultValue
             view?.setResultLabel(with: "\(resultNumber)")
             updateCalculation(isFirstCalculation: false, operation: operation)
         }

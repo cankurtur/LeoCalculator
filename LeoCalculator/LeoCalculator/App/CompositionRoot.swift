@@ -8,7 +8,14 @@
 import Foundation
 import LeoNetworking
 
-final class CompositionRoot {
+protocol CompositionRootInterface {
+    var networkManager: NetworkManagerProtocol { get set }
+    var rcManager: RCManagerInterface { get set }
+    var themeManager: ThemeManagerInterface { get set }
+    var notificationCenter: NotificationCenterProtocol { get set }
+}
+
+final class CompositionRoot: CompositionRootInterface {
     
     static let shared = CompositionRoot()
     
@@ -22,7 +29,7 @@ final class CompositionRoot {
         return RCManager.shared
     }()
     
-    lazy var themeManager: ThemeManager = {
+    lazy var themeManager: ThemeManagerInterface = {
         return ThemeManager.shared
     }()
     

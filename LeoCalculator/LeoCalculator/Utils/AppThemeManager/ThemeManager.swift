@@ -7,9 +7,14 @@
 
 import Foundation
 
+protocol ThemeManagerInterface: AnyObject {
+    func changeCurrentTheme(with theme: Theme)
+    func getCurrentTheme() -> Theme
+}
+
 // MARK: - ThemeManager
 
-final class ThemeManager {
+final class ThemeManager: ThemeManagerInterface {
     static let shared: ThemeManager = ThemeManager()
     
     private var currentTheme: Theme
