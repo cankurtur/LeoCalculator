@@ -14,7 +14,16 @@ case convertingCurrencies(baseCurrency: Currencies, targetCurrency: Currencies, 
         let apiKey = Config.shared.abstractAPIApiKey
         switch self {
         case .convertingCurrencies(let baseCurrency, let targetCurrency, let date, let baseAmount):
-            return "/v1/convert?api_key=\(apiKey)&base=\(baseCurrency.rawValue)&target=\(targetCurrency.rawValue)&date=\(date)&base_amount=\(baseAmount)"
+            var urlComponents = URLComponents()
+            urlComponents.path = "/convert"
+            urlComponents.queryItems = [URLQueryItem(name: "api_key", value: apiKey),
+                                        URLQueryItem(name: "base", value: baseCurrency.rawValue),
+                                        URLQueryItem(name: "target", value: targetCurrency.rawValue),
+                                        URLQueryItem(name: "date", value: date),
+                                        URLQueryItem(name: "base_amount", value: String(baseAmount))
+            ]
+            
+            return urlComponents.url?.absoluteString ?? ""
         }
     }
     
