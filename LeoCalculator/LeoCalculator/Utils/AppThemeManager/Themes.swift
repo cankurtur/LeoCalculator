@@ -14,15 +14,15 @@ struct OriginalTheme: ThemeProtocol {
     var backgroundColor: UIColor = .black
     var resultTextColor: UIColor = .white
     var numpadTextColor: UIColor = .white
-    var numpadBackgroundColor: UIColor  = .appLightGray()
+    var numpadBackgroundColor: UIColor  = .appLightGray
     var basicOperationTextColor: UIColor = .white
-    var basicOperationBackgroundColor: UIColor = .appOrange()
-    var extraOperationTextColor: UIColor = .appOrange()
-    var extraOperationBackgroundColor: UIColor = .appDarkGray()
+    var basicOperationBackgroundColor: UIColor = .appOrange
+    var extraOperationTextColor: UIColor = .appOrange
+    var extraOperationBackgroundColor: UIColor = .appDarkGray
     var clearTextColor: UIColor = .black
-    var clearBackgroundColor: UIColor = .appDarkGray()
+    var clearBackgroundColor: UIColor = .appDarkGray
     var equalTextColor: UIColor = .white
-    var equalBackgroundColor: UIColor = .appDarkGray()
+    var equalBackgroundColor: UIColor = .appDarkGray
 }
 
 // MARK: - RedTheme
@@ -31,13 +31,13 @@ struct RedTheme: ThemeProtocol {
     var backgroundColor: UIColor = .black
     var resultTextColor: UIColor = .white
     var numpadTextColor: UIColor = .white
-    var numpadBackgroundColor: UIColor  = .appLightGray()
+    var numpadBackgroundColor: UIColor  = .appLightGray
     var basicOperationTextColor: UIColor = .white
-    var basicOperationBackgroundColor: UIColor = .appRed()
-    var extraOperationTextColor: UIColor = .appRed()
-    var extraOperationBackgroundColor: UIColor = .appDarkGray()
+    var basicOperationBackgroundColor: UIColor = .appRed
+    var extraOperationTextColor: UIColor = .appRed
+    var extraOperationBackgroundColor: UIColor = .appDarkGray
     var clearTextColor: UIColor = .black
-    var clearBackgroundColor: UIColor = .appDarkGray()
+    var clearBackgroundColor: UIColor = .appDarkGray
     var equalTextColor: UIColor = .white
-    var equalBackgroundColor: UIColor = .appDarkGray()
+    var equalBackgroundColor: UIColor = .appDarkGray
 }

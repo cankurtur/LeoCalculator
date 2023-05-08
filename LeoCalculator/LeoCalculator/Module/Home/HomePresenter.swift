@@ -100,16 +100,15 @@ extension HomePresenter: HomePresenterInterface {
             resultNumber  = currentBasicOperation?.makeOperation(previousNumber, currentNumber) ?? Constant.defaultValue
             view?.setResultLabel(with: "\(resultNumber)")
             updateCalculation(isFirstCalculation: false, operation: operation)
+            return
+        }
+        
+        if resultNumber == Constant.defaultValue {
+            updateCalculation(isFirstCalculation: true, operation: operation)
         } else {
-            
-            if resultNumber == Constant.defaultValue {
-                updateCalculation(isFirstCalculation: true, operation: operation)
-                
-            } else {
-                resultNumber  = currentBasicOperation?.makeOperation(resultNumber, currentNumber) ?? Constant.defaultValue
-                view?.setResultLabel(with: "\(resultNumber)")
-                updateCalculation(isFirstCalculation: false, operation: operation)
-            }
+            resultNumber  = currentBasicOperation?.makeOperation(resultNumber, currentNumber) ?? Constant.defaultValue
+            view?.setResultLabel(with: "\(resultNumber)")
+            updateCalculation(isFirstCalculation: false, operation: operation)
         }
     }
     
@@ -142,6 +141,7 @@ extension HomePresenter: HomePresenterInterface {
     
     func equalButtonTapped() {
         guard let currentOperation = currentBasicOperation else { return }
+        
         let firstNumber = isOnTheFirstCalculation ? previousNumber : resultNumber
         let result = currentOperation.makeOperation(firstNumber, currentNumber) ?? Constant.defaultValue
         view?.setResultLabel(with: "\(result)")

@@ -51,10 +51,10 @@ private enum Constant {
     }
     
     enum ThemeSwitch {
-        static let offThumbTintColor: UIColor = .appOrange()
-        static let backgroundColor: UIColor = .appDarkGray()
-        static let onTintColor: UIColor = .appDarkGray()
-        static let onThumbTintColor: UIColor = .appRed()
+        static let offThumbTintColor: UIColor = .appOrange
+        static let backgroundColor: UIColor = .appDarkGray
+        static let onTintColor: UIColor = .appDarkGray
+        static let onThumbTintColor: UIColor = .appRed
     }
 }
 
@@ -94,14 +94,17 @@ final class HomeViewController: UIViewController, Storyboarded {
         super.viewDidLoad()
         presenter.viewDidLoad()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
 }
 
 // MARK: - HomeViewInterface
 
 extension HomeViewController: HomeViewInterface {
     func prepareUI() {
-        navigationController?.setNavigationBarHidden(true, animated: true)
-        
         prepareLabels()
         prepareButtons()
         prepareSwitch()
