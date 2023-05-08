@@ -67,7 +67,7 @@ final class HomePresenter {
 extension HomePresenter: HomePresenterInterface {
     func viewDidLoad() {
         view?.prepareUI()
-        view?.updateUI(with: compositionRoot.themeManager.getHomeUIModel())
+        view?.updateUI(theme: compositionRoot.themeManager.getCurrentTheme())
         
         compositionRoot.notificationCenter.add(
             observer: self,
@@ -168,7 +168,7 @@ extension HomePresenter: HomePresenterInterface {
     func didChangeValueOfSwitch(_ isOn: Bool) {
         let theme = isOn ? Theme.red : Theme.original
         compositionRoot.themeManager.changeCurrentTheme(with: theme)
-        view?.updateUI(with: compositionRoot.themeManager.getHomeUIModel())
+        view?.updateUI(theme: compositionRoot.themeManager.getCurrentTheme())
     }
 }
 
@@ -230,7 +230,7 @@ private extension HomePresenter {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             
-            self.view?.updateHiddenity(with: model)
+            self.view?.updateButtonsHiddenity(with: model)
         }
     }
 }
