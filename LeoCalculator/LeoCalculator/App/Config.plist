@@ -7,14 +7,14 @@
 		<key>abstractAPIApiKey</key>
 		<string>20b96f237e03471a8472a715e2684ce5</string>
 		<key>abstractAPIBaseUrl</key>
-		<string>https://exchange-rates.abstractapi.com</string>
+		<string>https://exchange-rates.abstractapi.com/v1</string>
 	</dict>
 	<key>Release</key>
 	<dict>
 		<key>abstractAPIApiKey</key>
 		<string>20b96f237e03471a8472a715e2684ce5</string>
 		<key>abstractAPIBaseUrl</key>
-		<string>https://exchange-rates.abstractapi.com</string>
+		<string>https://exchange-rates.abstractapi.com/v1</string>
 	</dict>
 </dict>
 </plist>
