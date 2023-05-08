@@ -51,10 +51,10 @@ private enum Constant {
     }
     
     enum ThemeSwitch {
-        static let offThumbTintColor: UIColor = .appOrange()
-        static let backgroundColor: UIColor = .appDarkGray()
-        static let onTintColor: UIColor = .appDarkGray()
-        static let onThumbTintColor: UIColor = .appRed()
+        static let offThumbTintColor: UIColor = .appOrange
+        static let backgroundColor: UIColor = .appDarkGray
+        static let onTintColor: UIColor = .appDarkGray
+        static let onThumbTintColor: UIColor = .appRed
     }
 }
 
@@ -63,8 +63,8 @@ private enum Constant {
 protocol HomeViewInterface: ViewInterface {
     func prepareUI()
     func setResultLabel(with result: String)
-    func updateHiddenity(with hiddenModel: HomeHiddenModel)
-    func updateUI(with uiModel: HomeUIModel)
+    func updateButtonsHiddenity(with hiddenModel: HomeHiddenModel)
+    func updateUI(theme: Theme)
 }
 
 // MARK: - HomeViewController
@@ -94,14 +94,17 @@ final class HomeViewController: UIViewController, Storyboarded {
         super.viewDidLoad()
         presenter.viewDidLoad()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
 }
 
 // MARK: - HomeViewInterface
 
 extension HomeViewController: HomeViewInterface {
     func prepareUI() {
-        navigationController?.setNavigationBarHidden(true, animated: true)
-        
         prepareLabels()
         prepareButtons()
         prepareSwitch()
@@ -111,7 +114,7 @@ extension HomeViewController: HomeViewInterface {
         resultLabel.text = result
     }
     
-    func updateHiddenity(with hiddenModel: HomeHiddenModel) {
+    func updateButtonsHiddenity(with hiddenModel: HomeHiddenModel) {
         addButton.isHidden = !hiddenModel.addIsHidden
         subtractButton.isHidden = !hiddenModel.subtractIsHidden
         multiplyButton.isHidden = !hiddenModel.multiplyIsHidden
@@ -121,42 +124,42 @@ extension HomeViewController: HomeViewInterface {
         bitcoinButton.isHidden = !hiddenModel.bitcoinIsHidden
     }
     
-    func updateUI(with uiModel: HomeUIModel) {
+    func updateUI(theme: Theme) {
         
-        view.backgroundColor = uiModel.backgroundColor
-        resultLabel.textColor = uiModel.resultTextColor
+        view.backgroundColor = theme.backgroundColor
+        resultLabel.textColor = theme.resultTextColor
        
         numpadButtons.forEach { button in
-            button.setTitleColor(uiModel.numpadTextColor, for: .normal)
-            button.backgroundColor = uiModel.numpadBackgroundColor
+            button.setTitleColor(theme.numpadTextColor, for: .normal)
+            button.backgroundColor = theme.numpadBackgroundColor
         }
         
-        addButton.setTitleColor(uiModel.basicOperationTextColor, for: .normal)
-        addButton.backgroundColor = uiModel.basicOperationBackgroundColor
+        addButton.setTitleColor(theme.basicOperationTextColor, for: .normal)
+        addButton.backgroundColor = theme.basicOperationBackgroundColor
         
-        subtractButton.setTitleColor(uiModel.basicOperationTextColor, for: .normal)
-        subtractButton.backgroundColor = uiModel.basicOperationBackgroundColor
+        subtractButton.setTitleColor(theme.basicOperationTextColor, for: .normal)
+        subtractButton.backgroundColor = theme.basicOperationBackgroundColor
         
-        multiplyButton.setTitleColor(uiModel.basicOperationTextColor, for: .normal)
-        multiplyButton.backgroundColor = uiModel.basicOperationBackgroundColor
+        multiplyButton.setTitleColor(theme.basicOperationTextColor, for: .normal)
+        multiplyButton.backgroundColor = theme.basicOperationBackgroundColor
         
-        divideButton.setTitleColor(uiModel.basicOperationTextColor, for: .normal)
-        divideButton.backgroundColor = uiModel.basicOperationBackgroundColor
+        divideButton.setTitleColor(theme.basicOperationTextColor, for: .normal)
+        divideButton.backgroundColor = theme.basicOperationBackgroundColor
         
-        sinButton.setTitleColor(uiModel.extraOperationTextColor, for: .normal)
-        sinButton.backgroundColor = uiModel.extraOperationBackgroundColor
+        sinButton.setTitleColor(theme.extraOperationTextColor, for: .normal)
+        sinButton.backgroundColor = theme.extraOperationBackgroundColor
         
-        cosButton.setTitleColor(uiModel.extraOperationTextColor, for: .normal)
-        cosButton.backgroundColor = uiModel.extraOperationBackgroundColor
+        cosButton.setTitleColor(theme.extraOperationTextColor, for: .normal)
+        cosButton.backgroundColor = theme.extraOperationBackgroundColor
 
-        bitcoinButton.setTitleColor(uiModel.extraOperationTextColor, for: .normal)
-        bitcoinButton.backgroundColor = uiModel.extraOperationBackgroundColor
+        bitcoinButton.setTitleColor(theme.extraOperationTextColor, for: .normal)
+        bitcoinButton.backgroundColor = theme.extraOperationBackgroundColor
         
-        clearButton.setTitleColor(uiModel.clearTextColor, for: .normal)
-        clearButton.backgroundColor = uiModel.clearBackgroundColor
+        clearButton.setTitleColor(theme.clearTextColor, for: .normal)
+        clearButton.backgroundColor = theme.clearBackgroundColor
 
-        equalButton.setTitleColor(uiModel.equalTextColor, for: .normal)
-        equalButton.backgroundColor = uiModel.equalBackgroundColor
+        equalButton.setTitleColor(theme.equalTextColor, for: .normal)
+        equalButton.backgroundColor = theme.equalBackgroundColor
     }
 }
 

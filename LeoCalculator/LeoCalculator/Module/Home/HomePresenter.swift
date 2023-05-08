@@ -67,7 +67,7 @@ final class HomePresenter {
 extension HomePresenter: HomePresenterInterface {
     func viewDidLoad() {
         view?.prepareUI()
-        view?.updateUI(with: compositionRoot.themeManager.getHomeUIModel())
+        view?.updateUI(theme: compositionRoot.themeManager.getCurrentTheme())
         
         compositionRoot.notificationCenter.add(
             observer: self,
@@ -100,16 +100,15 @@ extension HomePresenter: HomePresenterInterface {
             resultNumber  = currentBasicOperation?.makeOperation(previousNumber, currentNumber) ?? Constant.defaultValue
             view?.setResultLabel(with: "\(resultNumber)")
             updateCalculation(isFirstCalculation: false, operation: operation)
+            return
+        }
+        
+        if resultNumber == Constant.defaultValue {
+            updateCalculation(isFirstCalculation: true, operation: operation)
         } else {
-            
-            if resultNumber == Constant.defaultValue {
-                updateCalculation(isFirstCalculation: true, operation: operation)
-                
-            } else {
-                resultNumber  = currentBasicOperation?.makeOperation(resultNumber, currentNumber) ?? Constant.defaultValue
-                view?.setResultLabel(with: "\(resultNumber)")
-                updateCalculation(isFirstCalculation: false, operation: operation)
-            }
+            resultNumber  = currentBasicOperation?.makeOperation(resultNumber, currentNumber) ?? Constant.defaultValue
+            view?.setResultLabel(with: "\(resultNumber)")
+            updateCalculation(isFirstCalculation: false, operation: operation)
         }
     }
     
@@ -142,6 +141,7 @@ extension HomePresenter: HomePresenterInterface {
     
     func equalButtonTapped() {
         guard let currentOperation = currentBasicOperation else { return }
+        
         let firstNumber = isOnTheFirstCalculation ? previousNumber : resultNumber
         let result = currentOperation.makeOperation(firstNumber, currentNumber) ?? Constant.defaultValue
         view?.setResultLabel(with: "\(result)")
@@ -168,7 +168,7 @@ extension HomePresenter: HomePresenterInterface {
     func didChangeValueOfSwitch(_ isOn: Bool) {
         let theme = isOn ? Theme.red : Theme.original
         compositionRoot.themeManager.changeCurrentTheme(with: theme)
-        view?.updateUI(with: compositionRoot.themeManager.getHomeUIModel())
+        view?.updateUI(theme: compositionRoot.themeManager.getCurrentTheme())
     }
 }
 
@@ -230,7 +230,7 @@ private extension HomePresenter {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             
-            self.view?.updateHiddenity(with: model)
+            self.view?.updateButtonsHiddenity(with: model)
         }
     }
 }

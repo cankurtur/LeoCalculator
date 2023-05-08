@@ -34,7 +34,7 @@ private enum Constant {
     enum ActionButton {
         static let titleColor: UIColor = .white
         static let font: UIFont = .bold20
-        static let backgroundColor: UIColor = .appOrange()
+        static let backgroundColor: UIColor = .appOrange
         static let cornerRadius: CGFloat = 25
     }
 }

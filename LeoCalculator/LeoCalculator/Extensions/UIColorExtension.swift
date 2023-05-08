@@ -10,22 +10,14 @@ import UIKit
 extension UIColor {
     
     // #595959
-    class func appDarkGray() -> UIColor {
-        return UIColor(named: "AppDarkGray")!
-    }
+    static let appDarkGray: UIColor = UIColor(named: "AppDarkGray")!
     
     // #7F7F7F
-    class func appLightGray() -> UIColor {
-        return UIColor(named: "AppLightGray")!
-    }
+    static let appLightGray: UIColor = UIColor(named: "AppLightGray")!
     
     // #FF8800
-    class func appOrange() -> UIColor {
-        return UIColor(named: "AppOrange")!
-    }
+    static let appOrange: UIColor = UIColor(named: "AppOrange")!
     
     // #D00000
-    class func appRed() -> UIColor {
-        return UIColor(named: "AppRed")!
-    }
+    static let appRed: UIColor = UIColor(named: "AppRed")!
 }
