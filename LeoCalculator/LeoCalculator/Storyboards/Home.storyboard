@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="LeoCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iCy-25-qow">
+                                <rect key="frame" x="7" y="27" width="303" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1V-cO-uGp">
+                                        <rect key="frame" x="0.0" y="28" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="iYk-1Q-gUu"/>
+                                            <constraint firstAttribute="height" constant="44" id="wdU-lI-M4Q"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yf8-vB-3If">
+                                        <rect key="frame" x="54" y="0.0" width="249" height="100"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Ymo-Pw-tW8"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="htO-FD-A2I" userLabel="Key Stack View">
+                                <rect key="frame" x="7" y="134" width="306" height="389"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="0Cb-zU-q7V" userLabel="Extra Operations Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="306" height="74"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49s-YP-QVQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="100.5" height="74"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZR6-aV-p8j">
+                                                <rect key="frame" x="102.5" y="0.0" width="101" height="74"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6W-6i-WDT">
+                                                <rect key="frame" x="205.5" y="0.0" width="100.5" height="74"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="qhf-U3-txx">
+                                        <rect key="frame" x="0.0" y="76" width="306" height="313"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="3nH-DM-Wz1" userLabel="Numpad Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="228.5" height="313"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="DA7-ci-2Cv">
+                                                        <rect key="frame" x="0.0" y="0.0" width="228.5" height="76.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtd-zP-O7h">
+                                                                <rect key="frame" x="0.0" y="0.0" width="75" height="76.5"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="7"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdb-pk-4iV">
+                                                                <rect key="frame" x="77" y="0.0" width="74.5" height="76.5"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="8"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVD-Fi-dNk">
+                                                                <rect key="frame" x="153.5" y="0.0" width="75" height="76.5"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="9"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="OMg-rP-ior">
+                                                        <rect key="frame" x="0.0" y="78.5" width="228.5" height="77"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yu-Mk-J1D">
+                                                                <rect key="frame" x="0.0" y="0.0" width="75" height="77"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="4"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBl-4n-UXy">
+                                                                <rect key="frame" x="77" y="0.0" width="74.5" height="77"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="5"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9U-c7-Ng6">
+                                                                <rect key="frame" x="153.5" y="0.0" width="75" height="77"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="6"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="9x1-xm-fdt">
+                                                        <rect key="frame" x="0.0" y="157.5" width="228.5" height="76.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CN-3a-245">
+                                                                <rect key="frame" x="0.0" y="0.0" width="75" height="76.5"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="1"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOh-Af-qml">
+                                                                <rect key="frame" x="77" y="0.0" width="74.5" height="76.5"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="2"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wW1-sb-9o5">
+                                                                <rect key="frame" x="153.5" y="0.0" width="75" height="76.5"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="3"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="jbl-Ig-Qbb">
+                                                        <rect key="frame" x="0.0" y="236" width="228.5" height="77"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEG-bW-daj">
+                                                                <rect key="frame" x="0.0" y="0.0" width="75" height="77"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="0"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scU-GI-gGA">
+                                                                <rect key="frame" x="77" y="0.0" width="74.5" height="77"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="."/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5g4-gp-chE">
+                                                                <rect key="frame" x="153.5" y="0.0" width="75" height="77"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="4yx-q7-a5Y" userLabel="Basic Operations Stack View">
+                                                <rect key="frame" x="230.5" y="0.0" width="75.5" height="313"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qW-Tf-qbU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="75.5" height="76.5"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nmx-e9-Fa3">
+                                                        <rect key="frame" x="0.0" y="78.5" width="75.5" height="77"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icj-x5-eSm">
+                                                        <rect key="frame" x="0.0" y="157.5" width="75.5" height="76.5"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xk2-BN-aPT">
+                                                        <rect key="frame" x="0.0" y="236" width="75.5" height="77"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NTq-Vp-O9X">
+                                <rect key="frame" x="135.5" y="530" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="FvJ-Id-TBB"/>
+                                </constraints>
+                            </switch>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="htO-FD-A2I" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="7" id="69B-0G-0Rm"/>
+                            <constraint firstItem="iCy-25-qow" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="7" id="7ie-qJ-Tgp"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="NTq-Vp-O9X" secondAttribute="bottom" constant="7" id="F3t-G1-zSW"/>
+                            <constraint firstItem="NTq-Vp-O9X" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="XC2-hR-bCX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="htO-FD-A2I" secondAttribute="trailing" constant="7" id="XQV-EN-7Lq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="iCy-25-qow" secondAttribute="trailing" constant="10" id="f1Y-GG-mMd"/>
+                            <constraint firstItem="NTq-Vp-O9X" firstAttribute="top" secondItem="htO-FD-A2I" secondAttribute="bottom" constant="7" id="p0m-8d-ytD"/>
+                            <constraint firstItem="htO-FD-A2I" firstAttribute="top" secondItem="iCy-25-qow" secondAttribute="bottom" constant="7" id="rkA-h6-AuT"/>
+                            <constraint firstItem="iCy-25-qow" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="7" id="vgJ-jI-f0W"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="icj-x5-eSm" id="DY7-j5-CnF"/>
+                        <outlet property="bitcoinButton" destination="R6W-6i-WDT" id="05a-MV-Qnf"/>
+                        <outlet property="clearButton" destination="T1V-cO-uGp" id="JpL-Hf-EUb"/>
+                        <outlet property="cosButton" destination="ZR6-aV-p8j" id="jkV-L5-xA7"/>
+                        <outlet property="divideButton" destination="Nmx-e9-Fa3" id="j6Y-SB-muy"/>
+                        <outlet property="equalButton" destination="5g4-gp-chE" id="C1O-J9-ggi"/>
+                        <outlet property="multiplyButton" destination="1qW-Tf-qbU" id="lD1-Da-5Rg"/>
+                        <outlet property="resultLabel" destination="yf8-vB-3If" id="OD3-mz-VZx"/>
+                        <outlet property="sinButton" destination="49s-YP-QVQ" id="aLt-Ug-9iV"/>
+                        <outlet property="subtractButton" destination="Xk2-BN-aPT" id="1xx-Kr-5rc"/>
+                        <outlet property="themeSwitch" destination="NTq-Vp-O9X" id="6wV-kl-CX5"/>
+                        <outletCollection property="numpadButtons" destination="Jtd-zP-O7h" collectionClass="NSMutableArray" id="jL0-9U-gkX"/>
+                        <outletCollection property="numpadButtons" destination="Fdb-pk-4iV" collectionClass="NSMutableArray" id="PRA-1Z-3sC"/>
+                        <outletCollection property="numpadButtons" destination="BVD-Fi-dNk" collectionClass="NSMutableArray" id="pCe-UW-QJY"/>
+                        <outletCollection property="numpadButtons" destination="9yu-Mk-J1D" collectionClass="NSMutableArray" id="3xk-Bs-TAt"/>
+                        <outletCollection property="numpadButtons" destination="hBl-4n-UXy" collectionClass="NSMutableArray" id="UFk-2a-X3u"/>
+                        <outletCollection property="numpadButtons" destination="A9U-c7-Ng6" collectionClass="NSMutableArray" id="qXk-45-eeE"/>
+                        <outletCollection property="numpadButtons" destination="8CN-3a-245" collectionClass="NSMutableArray" id="uOG-Jd-NCi"/>
+                        <outletCollection property="numpadButtons" destination="NOh-Af-qml" collectionClass="NSMutableArray" id="CKh-Td-rDa"/>
+                        <outletCollection property="numpadButtons" destination="wW1-sb-9o5" collectionClass="NSMutableArray" id="rpa-k7-adt"/>
+                        <outletCollection property="numpadButtons" destination="uEG-bW-daj" collectionClass="NSMutableArray" id="Lpc-UG-4pw"/>
+                        <outletCollection property="numpadButtons" destination="scU-GI-gGA" collectionClass="NSMutableArray" id="1Zk-PN-7h6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

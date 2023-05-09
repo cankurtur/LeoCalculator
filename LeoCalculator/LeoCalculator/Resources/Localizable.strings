@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  LeoCalculator
+
+  Created by Can Kurtur on 5.05.2023.
+  
+*/
+
+// General
+
+"general.zero" = "0";
+"general.point" = ".";
+"general.empty" = "";
+
+// Home
+
+"home.clear" = "C";
+"home.sin" = "sin";
+"home.cos" = "cos";
+"home.bitcoinToDollar" = "฿ to $";
+"home.multiply" = "x";
+"home.divide" = "/";
+"home.add" = "+";
+"home.subtract" = "-";
+"home.equal" = "=";
+
+// AppPopup
+
+"appPopupView.error" = "Error";
+"appPopupView.ok" = "OK";
+
+// HUD
+
+"hud.calculating" = "Calculating";
