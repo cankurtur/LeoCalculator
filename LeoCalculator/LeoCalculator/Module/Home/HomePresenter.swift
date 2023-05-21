@@ -15,7 +15,7 @@ private enum Constant {
     static let zero: String = Localizable.generalZero
     static let point: String = Localizable.generalPoint
     static let defaultValue: Double = 0
-    static let pointCount: Int = 1
+    static let zeroCount: Int = 1
 }
 
 // MARK: - PresenterInterface
@@ -42,7 +42,7 @@ final class HomePresenter {
     private var currentNumber: Double = 0
     private var resultNumber: Double = 0
     private var currentBasicOperation: BasicOperations?
-    private var currentExtraOpertaion: ExtraOperations?
+    private var currentExtraOperation: ExtraOperations?
     private(set) var isOnTheFirstCalculation: Bool = false
     
     var input: String = Constant.emptyString
@@ -84,7 +84,7 @@ extension HomePresenter: HomePresenterInterface {
             return
         }
         
-        if input.count == Constant.pointCount, input.contains(Constant.zero) {
+        if input.count == Constant.zeroCount, input.contains(Constant.zero) {
             input = Constant.emptyString
         }
         
@@ -115,19 +115,19 @@ extension HomePresenter: HomePresenterInterface {
     func extraOperationsTapped(operation: String?) {
         guard let operation = operation else { return }
         
-        currentExtraOpertaion = ExtraOperations.currentOperation(operation)
+        currentExtraOperation = ExtraOperations.currentOperation(operation)
         
-        guard currentExtraOpertaion != nil else { return }
+        guard currentExtraOperation != nil else { return }
         
         if currentNumber > Constant.defaultValue {
-            let result = currentExtraOpertaion?.getValue(currentNumber) ?? Constant.defaultValue
+            let result = currentExtraOperation?.getValue(currentNumber) ?? Constant.defaultValue
             view?.setResultLabel(with: "\(result)")
             resetCalculation()
             return
         }
         
         if resultNumber > Constant.defaultValue {
-            let result = currentExtraOpertaion?.getValue(resultNumber) ?? Constant.defaultValue
+            let result = currentExtraOperation?.getValue(resultNumber) ?? Constant.defaultValue
             view?.setResultLabel(with: "\(result)")
             resetCalculation()
             return
@@ -150,7 +150,7 @@ extension HomePresenter: HomePresenterInterface {
     func bitcoinButtonTapped() {
         
         // The base API doesn't support the current date rate on the free version, which is why twoDaysBefore's value was created.
-        let twoDaysBefore = Date().twoDaysBefore.toString()
+        let twoDaysBefore = Date.twoDaysBefore.toString()
         
         if currentNumber > Constant.defaultValue {
             view?.showHUD()
