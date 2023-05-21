@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol PresenterInterface: AnyObject {
+protocol PresenterInterface: AnyObject {
     func viewDidLoad()
     func viewWillAppear()
     func viewDidAppear()
@@ -17,7 +17,7 @@ public protocol PresenterInterface: AnyObject {
     func viewDidLayoutSubviews()
 }
 
-public extension PresenterInterface {
+extension PresenterInterface {
     func viewDidLoad() { }
     func viewWillAppear() { }
     func viewDidAppear() { }

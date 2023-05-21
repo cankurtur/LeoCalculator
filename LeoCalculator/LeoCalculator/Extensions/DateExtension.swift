@@ -10,7 +10,7 @@ import Foundation
 extension Date {
     
     final class Format {
-        public static var defaultDate: String = "yyyy-MM-dd"
+        static var defaultDate: String = "yyyy-MM-dd"
     }
     
     static var twoDaysBefore: Date { return Date().twoDaysBefore }

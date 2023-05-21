@@ -7,6 +7,6 @@
 
 import Foundation
 
-public enum StoryboardNames: String {
+enum StoryboardNames: String {
     case home = "Home"
 }
