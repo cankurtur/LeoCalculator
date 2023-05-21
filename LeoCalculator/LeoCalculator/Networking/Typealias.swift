@@ -8,7 +8,7 @@
 import Foundation
 import LeoNetworking
 
-public typealias EmptyResponse = LeoNetworking.EmptyResponse
-public typealias APIClientError = LeoNetworking.APIClientError
-public typealias NetworkManagerProtocol = LeoNetworking.NetworkManagerProtocol
-public typealias BaseError = LeoNetworking.BaseError
+typealias EmptyResponse = LeoNetworking.EmptyResponse
+typealias APIClientError = LeoNetworking.APIClientError
+typealias NetworkManagerProtocol = LeoNetworking.NetworkManagerProtocol
+typealias BaseError = LeoNetworking.BaseError

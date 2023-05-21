@@ -7,4 +7,4 @@
 
 import UIKit
 
-public protocol RouterInterface: AnyObject { }
+protocol RouterInterface: AnyObject { }

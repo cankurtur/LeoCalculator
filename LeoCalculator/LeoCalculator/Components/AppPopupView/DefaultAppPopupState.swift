@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - DefaultAppPopupState
 
-public enum DefaultAppPopupState {
+enum DefaultAppPopupState {
     case defaultPopup(title: String,
                       message: String,
                       buttonTitle: String,

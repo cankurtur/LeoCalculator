@@ -7,7 +7,7 @@
 
 import UIKit
 
-public protocol ViewInterface: AnyObject {
+protocol ViewInterface: AnyObject {
     func showPopup(title: String, message: String, buttonTitle: String, buttonAction: (() -> Void)?)
     func showPopup(error: APIClientError, buttonAction: (() -> Void)?)
     func showHUD()
@@ -15,7 +15,7 @@ public protocol ViewInterface: AnyObject {
     func dismissHUD()
 }
 
-public extension ViewInterface where Self: UIViewController {
+extension ViewInterface where Self: UIViewController {
     
     func showPopup(title: String, message: String, buttonTitle: String, buttonAction: (() -> Void)?) {
         SwiftMessagesManager().showForever(with: .defaultPopup(title: title,
