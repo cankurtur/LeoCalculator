@@ -22,7 +22,7 @@ public enum DefaultAppPopupState {
             return AppPopupViewModel(title: title,
                                      description: message,
                                      buttonTitle: buttonTitle) {
-                SwiftMessagesManager.shared.hide()
+                SwiftMessagesManager().hide()
                 action?()
             }
             
@@ -30,7 +30,7 @@ public enum DefaultAppPopupState {
             return AppPopupViewModel(title: Localizable.appPopupViewError,
                                      description: message,
                                      buttonTitle: Localizable.appPopupViewOk) {
-                SwiftMessagesManager.shared.hide()
+                SwiftMessagesManager().hide()
                 action?()
             }
         }
