@@ -9,27 +9,18 @@ import Foundation
 
 extension Date {
     
-    class Format {
+    final class Format {
         public static var defaultDate: String = "yyyy-MM-dd"
     }
     
-    static var yesterday: Date { return Date().dayBefore }
-    static var tomorrow:  Date { return Date().dayAfter }
-    
-    var dayBefore: Date {
-        return Calendar.current.date(byAdding: .day, value: -1, to: noon)!
-    }
-    
+    static var twoDaysBefore: Date { return Date().twoDaysBefore }
+
     var twoDaysBefore: Date {
-        return Calendar.current.date(byAdding: .day, value: -2, to: noon)!
-    }
-    
-    var dayAfter: Date {
-        return Calendar.current.date(byAdding: .day, value: 1, to: noon)!
+        return Calendar.current.date(byAdding: .day, value: -2, to: noon) ?? Date()
     }
     
     var noon: Date {
-        return Calendar.current.date(bySettingHour: 12, minute: 0, second: 0, of: self)!
+        return Calendar.current.date(bySettingHour: 12, minute: 0, second: 0, of: self) ?? Date()
     }
     
     func toString(withFormat format: String = Format.defaultDate) -> String {
@@ -37,11 +28,10 @@ extension Date {
         return formatter.string(from: self)
     }
     
-    fileprivate static func createFormatter(withDateFormat dateFormat: String) -> DateFormatter {
+    private static func createFormatter(withDateFormat dateFormat: String) -> DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = dateFormat
         
         return formatter
     }
-    
 }
