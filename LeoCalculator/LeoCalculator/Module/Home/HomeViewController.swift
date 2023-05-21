@@ -264,7 +264,7 @@ private extension HomeViewController {
     }
     
     func didChangeValue(_ sender: UISwitch) {
-        updateWaterSwitchStatus(sender.isOn)
+        updateThemeSwitchStatus(sender.isOn)
         presenter.didChangeValueOfSwitch(sender.isOn)
     }
 }
@@ -272,7 +272,7 @@ private extension HomeViewController {
 // MARK: - Helper
 
 private extension HomeViewController {
-    func updateWaterSwitchStatus(_ isOn: Bool) {
+    func updateThemeSwitchStatus(_ isOn: Bool) {
         themeSwitch.thumbTintColor = isOn ? Constant.ThemeSwitch.onThumbTintColor : Constant.ThemeSwitch.offThumbTintColor
         themeSwitch.onTintColor = Constant.ThemeSwitch.onTintColor
     }

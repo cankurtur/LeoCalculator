@@ -8,7 +8,7 @@
 import Foundation
 import LeoNetworking
 
-public extension Endpoint {
+extension Endpoint {
     var baseUrl: String {
         return BaseURL.abstractAPIBaseUrl.url
     }

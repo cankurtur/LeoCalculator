@@ -8,7 +8,7 @@
 import Foundation
 @testable import LeoCalculator
 
-class MockNotificationCenter: NotificationCenterProtocol {
+final class MockNotificationCenter: NotificationCenterProtocol {
     
     var isAddCalled: Bool = false
     var isRemoveWithCalled: Bool = false

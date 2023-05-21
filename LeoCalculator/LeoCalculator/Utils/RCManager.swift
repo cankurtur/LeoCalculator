@@ -35,7 +35,6 @@ final class RCManager: RCManagerInterface {
     private let remoteConfig = RemoteConfig.remoteConfig()
     
     private init() {
-        // Don't actually set this 0 in production!
         remoteConfigSettings.minimumFetchInterval = getFetchDuration()
         remoteConfig.configSettings = remoteConfigSettings
     }

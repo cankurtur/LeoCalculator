@@ -7,4 +7,4 @@
 
 import Foundation
 
-public protocol InteractorInterface: AnyObject { }
+protocol InteractorInterface: AnyObject { }

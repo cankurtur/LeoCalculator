@@ -7,12 +7,12 @@
 
 import UIKit
 
-public protocol Storyboarded {
+protocol Storyboarded {
     static var storyboardName: StoryboardNames { get }
     static func instantiate(identifier: String?) -> Self
 }
 
-public extension Storyboarded where Self: UIViewController {
+extension Storyboarded where Self: UIViewController {
     static func instantiate(identifier: String? = nil) -> Self {
         let storyboard = UIStoryboard(name: storyboardName.rawValue, bundle: nil)
 

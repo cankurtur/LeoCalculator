@@ -34,7 +34,6 @@ private enum Constant {
     enum ActionButton {
         static let titleColor: UIColor = .white
         static let font: UIFont = .bold20
-        static let backgroundColor: UIColor = .appOrange
         static let cornerRadius: CGFloat = 25
     }
 }
@@ -91,7 +90,7 @@ private extension AppPopupView {
     func prepareButtons() {
         actionButton.setTitleColor(Constant.ActionButton.titleColor, for: .normal)
         actionButton.titleLabel?.font = Constant.ActionButton.font
-        actionButton.backgroundColor = Constant.ActionButton.backgroundColor
+        actionButton.backgroundColor = ThemeManager.shared.getCurrentTheme().appPopupActionButtonColor
         actionButton.layer.cornerRadius = Constant.ActionButton.cornerRadius
         actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
     }

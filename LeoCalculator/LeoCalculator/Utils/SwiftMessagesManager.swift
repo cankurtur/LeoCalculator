@@ -9,11 +9,6 @@ import SwiftMessages
 import UIKit
 
 final class SwiftMessagesManager {
-    
-    static let shared: SwiftMessagesManager = SwiftMessagesManager()
-    
-    private init() {}
-    
     func showForever(view: UIView, dimColor: UIColor? = .gray.withAlphaComponent(0.8), presentationStyle: SwiftMessages.PresentationStyle = .center, interactive: Bool = false) {
         var config = SwiftMessages.defaultConfig
         config.duration = .forever

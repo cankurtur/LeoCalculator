@@ -14,7 +14,6 @@ protocol HomeRouterInterface: RouterInterface { }
 // MARK: - HomeRouter
 
 final class HomeRouter {
-    private weak var presenter: HomePresenter?
     private weak var navigationController: UINavigationController?
     
     init(navigationController: UINavigationController?) {
@@ -29,7 +28,6 @@ final class HomeRouter {
         navCon.modalPresentationStyle = .fullScreen
         let router = HomeRouter(navigationController: navCon)
         let presenter = HomePresenter(router: router, interactor: interactor, view: view)
-        router.presenter = presenter
         view.presenter = presenter
         interactor.output = presenter
         
