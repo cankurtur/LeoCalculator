@@ -6,7 +6,7 @@
 //
 
 import LeoNetworking
-
-public class ClientError: APIError {
-    public var error: BaseError
+ 
+class ClientError: APIError {
+    var error: BaseError
 }

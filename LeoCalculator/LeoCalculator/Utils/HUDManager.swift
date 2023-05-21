@@ -11,10 +11,6 @@ import MBProgressHUD
 
 final class HUDManager {
     
-    static let shared: HUDManager = HUDManager()
-    
-    private init() {}
-    
     func showHUD(text: String, onMainThread: Bool = false, viewController: UIViewController) {
         if onMainThread {
             let progressHUD = MBProgressHUD.showAdded(to: viewController.view, animated: true)

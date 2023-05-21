@@ -7,16 +7,16 @@
 
 import UIKit
 
-open class NibView: UIView {
+class NibView: UIView {
     var view: UIView!
 
-    override public init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         xibSetup()
         commonInit()
     }
 
-    required public init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         xibSetup()
         commonInit()

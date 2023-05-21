@@ -121,4 +121,13 @@ enum Theme {
             return .appDarkGray
         }
     }
+    
+    var appPopupActionButtonColor: UIColor {
+        switch self {
+        case .original:
+            return .appOrange
+        case .red:
+            return .appRed
+        }
+    }
 }
