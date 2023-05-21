@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum BaseURL: String {
+enum BaseURL: String {
     case abstractAPIBaseUrl
     
     var url: String {
